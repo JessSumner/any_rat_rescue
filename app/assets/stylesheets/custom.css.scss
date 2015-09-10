@@ -1,4 +1,61 @@
+$blue: #65BEDB;
+$tan: #F7C797;
+$dark-blue: #363691;
+$light-tan: #F7E1CB;
+
+header {
+  min-height: 50px;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+  color: $dark-blue;
+}
+
+.menu {
+  background-color: $blue;
+  @include span-columns(12);
+  min-height: 50px;
+  ul {
+    list-style-type: none;
+    li {
+      display: inline;
+      text-decoration: none;
+      float: right;
+      margin-left: 15px;
+    }
+  }
+}
+
+main {
+  @include outer-container;
+}
+
+body {
+  background-color: $tan;
+}
+
+.logo {
+  @include span-columns(1);
+  @include shift(1);
+}
+
 .block-text {
   @include span-columns(4);
   @include shift(4);
+  text-align: justify;
+}
+
+.notice {
+  @include span-columns(4);
+  @include shift(4);
+  background-color: $light-tan;
+  text-align: justify;
+  outline-color: $dark-blue;
+}
+
+footer {
+
 }

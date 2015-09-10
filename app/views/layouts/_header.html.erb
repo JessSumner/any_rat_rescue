@@ -1,0 +1,18 @@
+<header>
+  <h1> Any Rat Rescue </h1>
+  <%= image_tag("Logo Blue.jpg", class: "logo") %>
+  <nav class="menu">
+    <ul>
+      <li><%= link_to "Home", root_path %></li>
+      <li><%= link_to "Adopt", '#' %></li>
+      <li><%= link_to "Newsletters", '#' %></li>
+      <li><%= link_to "Resources", resources_path %></li>
+      <li><%= "How to help" %>
+        <select>
+          <option><%= link_to "Volunteer", '#' %></option>
+          <option><%= link_to "Donate", '#' %></option>
+        </select>  
+      </li>
+    </ul>
+  </nav>
+</header>
