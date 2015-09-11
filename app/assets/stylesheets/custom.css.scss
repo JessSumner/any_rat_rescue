@@ -44,6 +44,16 @@ main {
 body {
 }
 
+.resources {
+  list-style-type: none;
+  .block {
+    @include span-columns(3);
+    background-color: $light-tan;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
 .logo {
   height: 200px;
   width: 250px;
