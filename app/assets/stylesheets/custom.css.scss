@@ -41,44 +41,18 @@ main {
   @include outer-container;
 }
 
-.side-image {
-  $base-line-height: 1.5em !default;
-  $action-color: #477DCA !default;
-  $dark-gray: #333 !default;
-  $large-screen: em(860) !default;
-  $base-font-color: $dark-gray !default;
-  $side-image-background-top: #B5EBEB;
-  $side-image-background-bottom: #5DAC5D;
-  $side-image-content-background: #F9F9F9;
-  $side-image-border: 1px solid darken(transparentize($side-image-background-bottom, 0.8), 30%);
-  
-  background: $side-image-content-background;
-}
-
-.image-wrapper {
-  background-size: cover;
-  border-bottom: $side-image-border;
-  display: block;
-  min-height: 12em;
-  padding: 3em;
-  @include media($large-screen) {
-    @include span-columns(4);
-    background-position: bottom;
-    background-size: cover;
-    border-right: $side-image-border;
-  }
-}
-
-.side-image-content {
+.text-with-side-image {
+  @include outer-container;
   @include span-columns(12);
-  padding: 1em 1em 4em 1em;
-  
-  @include media($large-screen) {
-    @include span-columns(8);
-    padding: 4em 4em 8em 4em;
+  .side-image {
+    @include span-columns(3 of 12);
+    margin-right: 117px;
+    margin-top: 100px;
+    .block-text {
+      @include span-columns (5 of 12);
+      text-align: justify;
+    }
   }
-
-  @include reset-display();
 }
 
 body {
