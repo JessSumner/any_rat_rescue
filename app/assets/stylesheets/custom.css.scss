@@ -98,46 +98,55 @@ body {
   padding-right: 15px;
   margin-top: 20px;
 }
+.adopt-page {
+  @include outer-container;
+  .stats {
+    @include span-columns(12);
+    @include omega();
+    $base-spacing: 1.5em !default;
+    padding: base-spacing /Z;
+    margin-top: 100px;
+    text-align: center;
 
-.stats {
-  $base-spacing: 1.5em !default;
-  padding: base-spacing /Z;
-  margin-top: 100px;
-  text-align: center;
-
-  ul {
-    padding: 0;
-  }
-
-  li {
-    border-right: 1px solid transparentize($dark-blue, 0.8);
-    color: $blue;
-    display: inline;
-    float: left;
-    font-size: 1.2em;
-    line-height: 1.1em;
-    padding: 0 0.7em;
-
-    &:first-child {
-      padding-left: 0;
+    ul {
+      padding: 0;
     }
 
-    &:last-child {
-      border-right: 0;
+    li {
+      border-right: 1px solid transparentize($dark-blue, 0.8);
+      color: $blue;
+      display: inline;
+      float: left;
+      font-size: 1.2em;
+      line-height: 1.1em;
+      padding: 0 0.7em;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        border-right: 0;
+      }
+    }
+
+    span {
+      color: $dark-blue;
+      display: block;
+      font-size: 1em;
+      font-weight: normal;
     }
   }
 
-  span {
-    color: $dark-blue;
-    display: block;
-    font-size: 1em;
-    font-weight: normal;
+  .featured-pet {
+    @include span-columns(2);
+    margin-top: 100px;
   }
-}
 
-.featured-pet {
-  @include span-columns(2);
-  margin-top: 100px;
+  .petfinder-link {
+    @include span-columns(10);
+    @include omega();
+  }
 }
 
 footer {
