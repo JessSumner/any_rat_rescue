@@ -1,0 +1,27 @@
+<div class="stats">
+  <ul>
+    <li><%= @available_rats.count %><span>Rats available</span></li>
+    <li>"Adopted"<span>Adopted</span></li>
+    <li>"Adopted last month"<span>Adopted last month</span></li>
+  </ul>
+</div>
+
+<div class="text">
+  <h2>Rats looking for their forever home.</h2>
+  Mouse over their picture for their name. Click the image for more information.
+</div>
+
+<div>
+  <ul class="list-of-rats">
+    <% @available_rats.each do |rat| %>
+      <li>
+        <%= link_to("http://www.petfinder.com/petdetail/#{rat.id}") do %>
+          <%= image_tag rat.photos.first.medium, class: "rat-photo" %>
+          <span class="rat-name-container">
+            <span class="rat-name"><%= rat.name %></span>
+          </span>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>

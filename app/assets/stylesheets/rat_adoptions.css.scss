@@ -1,9 +1,10 @@
 .stats {
   @include span-columns(12);
-  @include omega();
+  @include shift(3.5);
   $base-spacing: 1.5em !default;
+  margin-bottom: 40px;
+  margin-top: 50px;
   padding: base-spacing /Z;
-  margin-top: 100px;
   text-align: center;
 
   ul {
@@ -36,51 +37,54 @@
   }
 }
 
-ul.list-of-rats {
+.list-of-rats {
   list-style-type: none;
   margin: 0;
   padding: 0;
   text-align: center;
+  
+  li {
+    display: inline-block;
+    height: 150px;
+    margin: 100px 1em 1em 0;
+    position: relative;
+    width: 150px;
+  }
 }
 
-ul.list-of-rats li{
-  display: inline-block;
-  height: 150px;
-  margin: 100px 1em 1em 0;
-  position: relative;
-  width: 150px;
-}
-
-span.text-content {
-  background: rgba(0,0,0,0.5);
+.rat-name-container {
+  @include transition(opacity 500ms);
+  background: rgba(0, 0, 0, 0.5);
   color: $blue;
   cursor: pointer;
   display: table;
   height: 100px;
   left: 0;
+  opacity: 0;
   position: absolute;
   top: 0;
   width: 150px;
-  opacity: 0;
-  -webkit-transition: opacity 500ms;
-  -moz-transition: opacity 500ms;
-  -o-transition: opacity 500ms;
-  transition: opacity 500ms;
-}
-
-span.text-content span {
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
-}
-
-ul.list-of-rats li:hover span.text-content {
-  opacity: 1;
+ 
+  &:hover {
+    opacity: 1;
+  }
+  
+  .rat-name {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  }
 }
 
 .rat-photo {
+  height: 100px;
   object-fit: cover;
   object-position: 30% 70%;
   width: 150px;
+}
+
+.text {
   height: 100px;
+  margin-top: 0;
+  text-align: center;
 }
