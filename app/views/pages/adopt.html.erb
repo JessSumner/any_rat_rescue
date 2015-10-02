@@ -6,10 +6,13 @@
   </ul>
 </div>
 
-<div class="list-of-rats">
-  <ul>
+<div>
+  <ul class="list-of-rats">
     <% @available_rats.each do |rat| %>
-      <li><%= rat.name %> - <%= image_tag rat.photos.first.medium, class: "rat-photo" %></li>
+      <li>
+        <%= image_tag rat.photos.first.medium, class: "rat-photo" %>
+        <span class="text-content"><span><%= rat.name %></span></span>
+      </li>
     <% end %>
   </ul>
 </div>
