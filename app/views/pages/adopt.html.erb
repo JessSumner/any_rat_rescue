@@ -1,7 +1,16 @@
 <div class="stats">
   <ul>
-    <li>"Rats available"<span>Rats available</span></li>
+    <li><%= @available_rats.count %><span>Rats available</span></li>
     <li>"Adopted"<span>Adopted</span></li>
     <li>"Adopted last month"<span>Adopted last month</span></li>
   </ul>
 </div>
+
+<div class="list-of-rats">
+  <ul>
+    <% @available_rats.each do |rat| %>
+      <li><%= rat.name %> - <%= image_tag rat.photos.first.medium, class: "rat-photo" %></li>
+    <% end %>
+  </ul>
+</div>
+
