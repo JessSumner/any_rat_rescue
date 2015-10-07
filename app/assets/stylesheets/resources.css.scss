@@ -16,3 +16,31 @@
 .resource-title{
   @include span-columns(12);
 }
+
+aside {
+  @include span-columns(12);
+  @include shift(0);
+  $base-spacing: 1.5em !default;
+  margin-bottom: 40px;
+  margin-top: 50px;
+  padding: base-spacing /Z;
+  text-align: center;
+  text-decoration: none;
+
+  .scroll-on-page-link {
+    border-right: 1px solid transparentize($dark-blue, 0.8);
+    color: $dark-blue;
+    display: inline;
+    font-size: 1.2em;
+    line-height: 1.1em;
+    padding: 0 0.7em;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+}
