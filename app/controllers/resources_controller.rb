@@ -4,6 +4,7 @@ class ResourcesController < ApplicationController
     @vets_phoenix = vets_phoenix
     @vets_tucson = vets_tucson
     @vets_other_areas = vets_other_areas
+    @pharmacy = pharmacy
   end
 
   private
@@ -158,11 +159,23 @@ class ResourcesController < ApplicationController
       },
       {
         name: "Dr. Kim McGill",
-        description: "Canyon Pet Hospital\n,1054 East Old Canyon Court,\n
+        description: "Canyon Pet Hospital,\n1054 East Old Canyon Court,\n
                       Flagstaff, AZ 86001",
         website: "http://www.canyonpet.com",
         phone: "928-774-5197",
         map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3260.6749272179827!2d-111.64056658475462!3d35.18965388031179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872d8f1465d8766f%3A0xec02f896a3031b1d!2sCanyon+Pet+Hospital!5e0!3m2!1sen!2sus!4v1444445991928"
+      }
+    ]
+  end
+
+  def pharmacy
+    [
+      {
+        name: "Diamondback Drugs",
+        description: "7631 E. Indian School Rd,\nScottsdale, AZ 85251",
+        phone: "866-578-4420",
+        website: "http://www.diamondbackdrugs.com",
+        map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3327.269815190985!2d-111.9181693847995!3d33.49435658076141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b097a2621c1f1%3A0x2bca4bd546ce7f9b!2sDiamondback+Drugs!5e0!3m2!1sen!2sus!4v1444508643492"
       }
     ]
   end

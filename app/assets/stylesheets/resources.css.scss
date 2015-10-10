@@ -13,7 +13,8 @@ h3 {
   box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
   margin-bottom: 10px;
   margin-top: 10px;
-  min-height: 250px;
+  height: 250px;
+  position: relative;
 
   p {
     margin: 2px 0 2px 0;
@@ -21,6 +22,8 @@ h3 {
 
   .map {
     @include span-columns(6 of 6);
+    bottom: 0;
+    position: absolute;
   }
 
   .vet-details-left {
@@ -39,8 +42,23 @@ h3 {
   }
 }
 
-.resource-title{
+.resource-title {
   @include span-columns(12);
+}
+
+.resource-cards-small {
+  @include span-columns(4);
+  @include omega(3n);
+  background-color: $light-tan;
+  box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+  margin-bottom: 10px;
+  margin-top: 10px;
+  min-height: 100px;
+  
+  p {
+    margin-bottom: 2px;
+    padding-left: 10px;
+  }
 }
 
 aside {

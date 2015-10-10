@@ -1,10 +1,18 @@
 <h2 id="scroll-link-4" class="resource-title">Pharmacy</h2>
 <ul class="resources">
-  <li class="resource-cards">
-    <h3>Diamondback Pharmacy</h3>
-    <p> 7631 E. Indian School Rd, </p>
-    <p> Scottsdale, AZ 85251 </p>
-    <p><a href="http://www.diamondbackdrugs.com"> website </a></p>
-    <p>866-578-4420</p>
-  </li>
+  <% @pharmacy.each do |pharmacy| %>
+    <li class="resource-cards">
+      <div class="vet-details-left">
+        <h3><%= pharmacy[:name] %></h3>
+        <%= simple_format pharmacy[:description] %>
+      </div>
+      <div class="vet-details-right">
+        <p><a href="<%= pharmacy[:website] %>"> website </a></p>
+        <p><%= pharmacy[:phone] %></p>
+      </div>
+      <div class="map">
+        <iframe src="<%= pharmacy[:map] %>" width="100%" height="125px" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+    </li>
+  <% end %>
 </ul>
