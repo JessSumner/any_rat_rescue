@@ -1,21 +1,18 @@
 <h2 id="scroll-link-3" class="resource-title">Recommended vets - Other areas </h2>
 <ul class="resources">
-  <li class="block">
-    <h3>Dr. William Dean</h3>
-    <p>Page Animal Hospital</p>
-    <p> 87 S. 7th Ave, </p>
-    <p> Page, AZ 86040 </p>
-    <p><a href="http://pageanimalhospital.com"> website 
-    </a></p>
-    <p>928-645-2816</p>
-  </li>
-
-  <li class="block">
-    <h3>Dr. Kim McGill</h3>
-    <p>Canyon Pet Hospital</p>
-    <p> 1054 East Old Canyon Court, </p>
-    <p> Flagstaff, AZ 86001 </p>
-    <p><a href="http://www.canyonpet.com"> website</a></p>
-    <p>928-774-5197</p>
-  </li>
+  <% @vets_other_areas.each do |vet| %>
+    <li class="resource-cards">
+      <h3><%= vet[:name] %></h3>
+      <div class="vet-details-left">
+        <%= simple_format vet[:description] %>
+      </div>
+      <div class="vet-details-right">
+        <p><a href="<%= vet[:website] %>">website</a></p>
+        <p><%= vet[:phone] %></p>
+      </div>
+      <div class="map">
+        <iframe src="<%= vet[:map] %>" width="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+    </li>
+  <% end %>
 </ul>

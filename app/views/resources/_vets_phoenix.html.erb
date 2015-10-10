@@ -1,133 +1,19 @@
 <h2 id="scroll-link-1" class="resource-title" > Recommended vets - Phoenix Metro </h2>
 <ul class="resources">
   <% @vets_phoenix.each do |vet| %>
-    <li class="block"> 
-      <h3><%= vet[:name] %></h3>
-      <div class="map">
-        map
-      </div>
-      <div class="text">
+    <li class="resource-cards"> 
+      <div class="vet-details-left">
+        <h3><%= vet[:name] %></h3>
         <%= simple_format vet[:description] %>
+      </div>
+      <div class="vet-details-right">
         <p><a href="<%= vet[:website] %>"> 
           website </a></p>
         <p><%= vet[:phone] %></p>
       </div>
+      <div class="map">
+        <iframe src="<%= vet[:map] %>" width="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
     </li>
   <% end %>
-  <li class="block"> 
-    <h3> Dr. Bill Langhofer </h3>
-    <div class="map">
-      map
-    </div>
-    <div class="text">
-      <p> The Scottsdale Veterinary Clinic </p>
-      <p> 7311 E Thomas Rd, </p>
-      <p> Scottsdale, AZ 85251 </p>
-      <p><a href="http://www.scottsdaleveterinaryclinic.com"> 
-        website </a></p>
-      <p> 480-945-8484 </p>
-    </div>
-  </li>
-
-  <li class="block">
-    <h3> Desert Bloom Mobile Veterinary Service </h3>
-    <p> Valleywide mobile service </p>
-    <p><a href="http://www.desertbloom-mobilevet.com"> website </a></p>
-    <p> 480-839-2824 </p>
-  </li>
-
-  <li class="block">
-    <h3> Arrowhead Ranch Animal Hospital </h3>
-    <p> Open 7 days a week! </p>
-    <p> 6750 W. Deer Valley Rd. Ste. C101, </p>
-    <p> Glendale, AZ 85310 </p>
-    <p><a href="http://www.arrowheadranchah.com"> website </a></p>
-    <p> 623-561-2677 </p>
-  </li>
-
-  <li class="block">
-    <h3> Emergency Animal Clinic </h3>
-    <p><a href="http://www.eac-az.com"> website </a></p>
-    <p> Locations: Avondale, Gilbert, Peoria, Phoenix and Scottsdale</p>
-    <p> Open 24 hours </p>
-  </li>
-   
-  <li class="block">
-    <h3> Dr. Jeffery Jenkins </h3>
-    <p> Ahwatukee Animal Care Hospital </p>
-    <p> 10855 South 48th St, </p>
-    <p> Phoenix, AZ 85044 </p>
-    <p><a href="http://ahwatukeeanimalcare.com"> website </a></p>
-    <p> 480-893-0533 </p>
-  </li>
-
-  <li class="block">
-    <h3> Dr. Ed Cohen </h3>
-    <p> Stetson Hills Animal Hospital </p>
-    <p> 3780 W. Happy Valley Rd. Ste. 126, </p>
-    <p> Glendale, AZ 85310 </p>
-    <p><a href="http://www.stetsonhillsanimalhospital.com"> website </a></p>
-    <p> 623-889-7090 </p>
-  </li>
-
-  <li class="block">   
-    <h3> Dr. Kristina Kryda </h3>
-    <p> Bell Ridge Animal Hospital </p>
-    <p> 3539 W. Bell Rd. Ste. 4, </p>
-    <p> Phoenix, AZ 85053 </p>
-    <p><a href="http://www.bellridgeah.com"> website </a></p>
-    <p> 602-938-1982 </p>
-  </li>
-
-  <li class="block">
-    <h3> Dr. Susan Goshert </h3>
-    <p> Union Hills Animal Hospital </p>
-    <p> 18410 N. 19th Ave, </p>
-    <p> Phoenix, AZ 85023 </p>
-    <p><a href="http://www.unionhillsanimalhospital.com"> website </a></p>
-    <p> 602-863-6629 </p>
-  </li>
-
-   <li class="block">
-    <h3> Dr. Todd Driggers </h3>
-    <p> Avian and Exotic Animal Clinic of Arizona </p>
-    <p> 7 E. Palo Verde St. Ste. 1, </p>
-    <p> Gilbert, AZ 85296 </p>
-    <p><a href="http://www.aeacarizona.com"> website </a></p>
-    <p> 480-706-8478 </p>
-  </li>
-
-  <li class="block">
-    <h3> Dr. Marilyn Lieb </h3>
-    <p> Desert View Animal Hospital </p>
-    <p> 4635 East Thomas Rd, </p>
-    <p> Phoenix, AZ 85018 </p>
-    <p><a href="http://www.dvah.com/"> website </a></p>
-    <p> 602-955-5500 </p>
-  </li>
-
- <li class="block">  
-    <h3> Dr. Rebecca Johnson </h3>
-    <p> Goodyear Animal Hospital </p>
-    <p> 380 N. Estrella Parkway, Ste. A6, </p>
-    <p> Goodyear, AZ 85338 </p>
-    <p><a href="http://www.goodyearah.com"> website </a></p>
-    <p> 623-882-9000 </p>
-  </li>
-
-  <li class="block">
-    <h3> Alta Mesa Animal Hospital </h3>
-    <p> 6704 E. Brown Rd, </p>
-    <p> Mesa, AZ 85205 </p>
-    <p><a href="http://www.altamesaanimalhospital.com"> website </a></p>
-    <p> 480-981-1244 </p>
-  </li>
-   
-  <li class="block">
-    <h3>Arizona Animal Wellness Center </h3>
-    <p> 3317 S. Higley Rd. Ste. 101, </p>
-    <p> Gilbert, AZ 85297 </p>
-    <p><a href="http://www.arizonaanimalwellnesscenter.com"> website </a></p>
-    <p>480-988-3660</p>
-  </li>
 </ul>

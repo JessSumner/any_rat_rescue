@@ -1,39 +1,19 @@
 <h2 id="scroll-link-2" class="resource-title"> Recommended vets - Tucson and surrounding area </h2>
 <ul class="resources">
-  <li class="block">
-    <h3>Dr. Randall Evans </h3>
-    <p> Northwest Pet Clinic </p>
-    <p> Two locations: </p>
-    <p> 6745 N La Canada Dr, </p>
-    <p> 252 W Ina Rd, </p>
-    <p><a href="http://www.northwestpetclinic.com"> website </a></p>
-    <p>520-742-4148</p>
-  </li>
-
-  <li class="block">
-    <h3> Dr. ShanAnne Edwards </h3>
-    <p>Arizona Small Animal Clinic</p>
-    <p> 10 E 31st St, </p>
-    <p> Tucson, AZ 85213 </p>
-    <p><a href="http://www.azsmallanimalclinic.com"> website </a></p>
-    <p>520-622-6231</p>
-  </li>
-
-  <li class="block">
-    <h3> Dr. Jody Moffett </h3>
-    <p> Sierra Animal Hospital </p>
-    <p> 900 S Hwy 92, </p>
-    <p> Sierra Vista, AZ 85635 </p>
-    <p><a href="http://www.sierraanimalhospital.com"> website </a></p>
-    <p>520-458-8656 </p>
-  </li>
-
-  <li class="block">
-    <h3> Dr. Michael Samuels </h3>
-    <p> Central Animal Hospital </p>
-    <p> 4020 E Speedway Blvd, </p>
-    <p> Tucson, AZ 85712 </p>
-    <p><a href="http://www.centralah.com"> website </a></p>
-    <p>520-323-9912</p>
-  </li>
+  <% @vets_tucson.each do |vet| %>
+    <li class="resource-cards">
+      <h3><%= vet[:name] %></h3>
+      
+      <div class="vet-details-left">
+        <%= simple_format vet[:description] %>
+      </div>
+      <div class="vet-details-right">
+        <p><a href="<%= vet[:website] %>">website </a></p>
+        <p><%= vet[:phone] %></p>
+      </div>
+      <div class="map">
+        <iframe src="<%= vet[:map] %>" width="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+    </li>
+  <% end %>
 </ul>
