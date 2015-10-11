@@ -9,18 +9,18 @@ class ResourcesController < ApplicationController
   private
 
   def vets_phoenix
-    YAML.load_file('config/resources/vets_phoenix.yml')
+    YAML.load_file("config/resources/vets_phoenix.yml")
   end
 
   def vets_tucson
-    YAML.load_file('config/resources/vets_tucson.yml')
+    YAML.load_file("config/resources/vets_tucson.yml")
   end
 
   def vets_other_areas
-    YAML.load_file('config/resources/vets_other_areas.yml')
+    YAML.load_file("config/resources/vets_other_areas.yml")
   end
 
   def pharmacy
-    YAML.load_file('config/resources/pharmacy.yml')
+    YAML.load_file("config/resources/pharmacy.yml")
   end
 end

@@ -10,14 +10,14 @@ h3 {
   @include span-columns(6);
   @include omega(2n);
   background-color: $light-tan;
-  box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.75);
   height: 250px;
   margin-bottom: 10px;
   margin-top: 10px;
   position: relative;
 
   p {
-    margin: 2px 0 2px 0;
+    margin: 2px 0;
   }
 
   .map {
@@ -29,7 +29,7 @@ h3 {
   .vet-details-left {
     @include span-columns(3 of 6);
     @include pad();
-    padding-top: 0px;
+    padding-top: 0;
     text-align: left;
   }
 
@@ -50,7 +50,7 @@ h3 {
   @include span-columns(4);
   @include omega(3n);
   background-color: $light-tan;
-  box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.75);
   margin-bottom: 10px;
   margin-top: 10px;
   min-height: 100px;
@@ -65,7 +65,7 @@ aside {
   @include span-columns(12);
   @include shift(0);
   $base-spacing: 1.5em !default;
-  margin: 50px 0 40px 0;
+  margin: 50px 0 40px;
   padding: base-spacing /Z;
   text-align: center;
   text-decoration: none;
