@@ -1,44 +1,9 @@
 <h2 id="scroll-link-6" class="resource-title">Rat guides</h2>
 <ul class="resources">
-  <li class="resource-cards-small">
-    <h3> Rat Guide </h3>
-    <p><a href="http://www.ratguide.com">website</a></p>
-  </li>
-  <li class="resource-cards-small">
-    <h3> The Rat Fan Club </h3>
-    <p><a href="http://www.ratfanclub.org">website</a></p>
-  </li>
-  <li class="resource-cards-small">
-    <h3> RatsRule </h3>
-    <p><a href="http://www.ratsrule.com">website</a></p>
-  </li>
-  <li class="resource-cards-small">
-    <h3>Suebee's Rat Diet</h3>
-    <p><a href="http://www.ratsrule.com/diet.html">website</a></p>
-  </li>
-  <li class="resource-cards-small">
-    <h3> Rat & Mouse Club of America </h3>
-    <p><a href="http://www.rmca.org">website</a></p>
-  </li>
-  <li class="resource-cards-small">
-    <h3> Rat Biology and Behaviour </h3>
-    <p><a href="http://www.ratbehavior.org">website</a></p>
-  </li>
-  <li class="resource-cards-small">
-    <h3> Join Rats </h3>
-    <p><a href="http://www.joinrats.com">website</a></p>
-  </li>
-  <li class="resource-cards-small">
-    <h3> Exotic Pets </h3>
-    <p><a href="http://www.exoticpets.about.com">website</a></p>
-  </li>
-  <li class="resource-cards-small">
-    <h3> Rat Assistance & Teaching Society </h3>
-    <p><a href="http://www.petrats.org">website</a></p>
-  </li>
-  <li class="resource-cards-small">
-    <h3>Martin's Cages</h3>
-    <p><a href="http://www.martinscages.com/products/cages/rat/">
-      website</a></p>
-  </li>
+  <% @rat_guides.each do |guide| %>
+    <li class="resource-cards-small">
+      <h3><%= guide["name"] %></h3>
+      <p><a href="<%= guide["website"] %>">website</a></p>
+    </li>
+  <% end %>
 </ul>

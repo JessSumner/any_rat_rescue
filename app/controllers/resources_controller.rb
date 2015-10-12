@@ -1,9 +1,11 @@
 class ResourcesController < ApplicationController
   def index
-    @vets_phoenix = vets_phoenix
-    @vets_tucson = vets_tucson
+    @vets_phoenix     = vets_phoenix
+    @vets_tucson      = vets_tucson
     @vets_other_areas = vets_other_areas
-    @pharmacy = pharmacy
+    @pharmacy         = pharmacy
+    @rat_sitting      = rat_sitting
+    @rat_guides       = rat_guides
   end
 
   private
@@ -22,5 +24,13 @@ class ResourcesController < ApplicationController
 
   def pharmacy
     YAML.load_file("config/resources/pharmacy.yml")
+  end
+
+  def rat_sitting
+    YAML.load_file("config/resources/rat_sitting.yml")
+  end
+
+  def rat_guides
+    YAML.load_file("config/resources/rat_guides.yml")
   end
 end

@@ -1,12 +1,9 @@
 <h2 id="scroll-link-5" class="resource-title">Rat Sitting</h2>
 <ul class ="resources">
-  <li class="resource-cards-small">
-    <h3>Benjamin Benefiel</h3>
-    <p>benjamin.benefiel@gmail.com</p>
-  </li>
-
-  <li class="resource-cards-small">
-    <h3>Lynn Cottor</h3>
-    <p><%= simple_format "lynn@desertdogtrng.com\n480-332-0740" %></p>
-  </li>
+  <% @rat_sitting.each do |sitter| %>
+    <li class="resource-cards-small">
+      <h3><%= sitter["name"] %></h3>
+      <p><%= simple_format sitter["contact"] %></p>
+    </li>
+  <% end %>
 </ul>
