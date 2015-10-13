@@ -1,6 +1,12 @@
 <header>
-  <%= image_tag("Logo Blue.jpg", class: "logo") %>
-  <h1> Any Rat Rescue </h1>
+  <div id="banner-container">
+    <div id="banner">
+      <%= image_tag("Logo Blue.jpg", class: "logo") %>
+      <%= image_tag("Bubbles.jpg", class: "banner-image") %>
+    </div>
+    <div id="gradient">
+    </div>
+  </div>
   <nav class="menu">
     <ul>
       <li><%= link_to "Home", root_path %></li>

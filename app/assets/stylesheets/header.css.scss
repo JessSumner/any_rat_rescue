@@ -1,0 +1,75 @@
+header {
+  min-height: 50px;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+  color: $dark-blue;
+}
+
+h2 {
+  font-size: 2em;
+  font-style: italic;
+  font-weight: bold;
+  color: $dark-blue;
+}
+
+.menu {
+  background-color: $blue;
+  @include span-columns(12);
+  min-height: 50px;
+  ul {
+    list-style-type: none;
+    li {
+      display: inline;
+      text-decoration: none;
+      float: right;
+      margin-left: 15px;
+    }
+  }
+}
+
+.logo {
+  height: 200px;
+  width: 250px;
+  margin-left: 50px;
+  margin-top: 15px;
+  border-style: groove;
+  border-width: thick;
+  border-color: $dark-blue;
+}
+
+#banner-container {
+  position: relative;
+}
+
+#banner {
+  overflow: hidden;
+  height: 250px;
+  background: white;
+}
+
+.banner-image {
+  height: 250px;
+  width: 669px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+#gradient {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 0;
+  right: 0;
+  height: 250px;
+  width: 669px;
+  @include linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 5%, rgba(255, 255, 255, 0) 95%, rgba(255, 255, 255, 1) 100%, $fallback: transparent);
+}
