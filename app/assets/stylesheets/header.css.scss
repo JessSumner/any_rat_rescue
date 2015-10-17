@@ -3,10 +3,10 @@ header {
 }
 
 h1 {
+  color: $dark-blue;
   font-size: 3em;
   font-weight: bold;
   text-align: center;
-  color: $dark-blue;
 }
 
 h2 {
@@ -16,29 +16,70 @@ h2 {
   color: $dark-blue;
 }
 
-.menu {
+#nav {
   background-color: $blue;
-  @include span-columns(12);
+  border-style: ridge none;
+  width: 100%;
   min-height: 50px;
-  ul {
-    list-style-type: none;
-    li {
-      display: inline;
-      text-decoration: none;
-      float: right;
-      margin-left: 15px;
-    }
+  list-style-type: none;
+  font-weight: bold;
+  position: relative;
+  margin-top: 0;
+}
+    
+#nav li {
+  float: right;
+  margin-left: 15px;
+  position: relative;
+
+  &:first-child {
+    padding-right: 50px;
   }
 }
 
+#nav a {
+  display: block;
+  padding: 12px 5px;
+  text-decoration: none;
+}
+
+#nav a:hover {
+  text-decoration: underline;
+}
+
+#nav ul{
+  background: #fff;
+  background: rgba(255, 255, 255, 0);
+  list-style: none;
+  position: absolute;
+  /*left: -9999px;*/
+}
+
+#nav ul li{
+  padding-top: 1px;
+  float: none;
+}
+
+#nav ul a {
+  white-space: nowrap;
+}
+
+#nav li:hover ul {
+  right: 0;
+}
+
+#nav li:hover ul a {
+  text-decoration: underline;
+  background: transparentize($blue, 0.2);
+}
+
 .logo {
+  border-style: outset;
+  border-width: thick;
   height: 200px;
-  width: 250px;
   margin-left: 50px;
   margin-top: 15px;
-  border-style: groove;
-  border-width: thick;
-  border-color: $dark-blue;
+  width: 250px;
 }
 
 #banner-container {
