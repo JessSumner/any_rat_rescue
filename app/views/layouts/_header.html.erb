@@ -8,16 +8,18 @@
     </div>
   </div>
 
-  <ul id="nav">
-    <li><%= link_to "Home", root_path %></li>
-    <li><%= link_to "Adopt", rat_adoptions_path %></li>
-    <li><%= link_to "Newsletters", "#" %></li>
-    <li><%= link_to "Resources", resources_path %></li>
-    <li><%= link_to "How to help", "#" %></a>
-      <ul>
-        <li><%= link_to "Volunteer", "#" %></li>
-        <li><%= link_to "Donate", "#" %></li>
-      </ul>  
-    </li>
-  </ul>
+  <div class="navigation-bar">
+    <ul id="nav">
+      <li><%= link_to "Home", root_path %></li>
+      <li><%= link_to "Newsletters", "#" %></li>
+      <li><%= link_to "Adopt", rat_adoptions_path %></li>
+      <li><%= link_to "Resources", resources_path %></li>
+      <li><%= link_to "How to help", "#" %></a>
+        <ul class="dropdown">
+          <li><%= link_to "Volunteer", "#" %></li>
+          <li><%= link_to "Donate", "#" %></li>
+        </ul>  
+      </li>
+    </ul>
+  </div>
 </header>

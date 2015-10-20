@@ -16,62 +16,57 @@ h2 {
   color: $dark-blue;
 }
 
-#nav {
-  background-color: $blue;
+.navigation-bar {
+  background: transparentize($blue, 0.2);
   border-style: ridge none;
-  width: 100%;
   min-height: 50px;
-  list-style-type: none;
-  font-weight: bold;
   position: relative;
-  margin-top: 0;
 }
-    
-#nav li {
-  float: right;
-  margin-left: 15px;
-  position: relative;
 
-  &:first-child {
-    padding-right: 50px;
+#nav {
+  font-weight: bold;
+  left: 30%;
+  list-style-type: none;
+  margin-top: 0;
+  position: absolute;
+  width: 100%;
+
+  > li {
+    display: inline-block;
+    padding: 15px;
+  }
+
+  a {
+    text-decoration: none;
+   
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
-#nav a {
-  display: block;
-  padding: 12px 5px;
-  text-decoration: none;
-}
-
-#nav a:hover {
-  text-decoration: underline;
-}
-
-#nav ul{
+.dropdown {
   background: #fff;
   background: rgba(255, 255, 255, 0);
+  display: none;
   list-style: none;
   position: absolute;
-  /*left: -9999px;*/
+  padding-left: 0;
+
+  li{
+    padding-top: 1px;
+    
+    a {
+      white-space: nowrap;
+    }
+  }
 }
 
-#nav ul li{
-  padding-top: 1px;
-  float: none;
+li:hover ul {
+  display: block;
+  position: absolute;
 }
 
-#nav ul a {
-  white-space: nowrap;
-}
-
-#nav li:hover ul {
-  right: 0;
-}
-
-#nav li:hover ul a {
-  text-decoration: underline;
-  background: transparentize($blue, 0.2);
-}
 
 .logo {
   border-style: outset;
