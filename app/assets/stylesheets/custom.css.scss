@@ -2,6 +2,8 @@ $blue: #65BEDB;
 $tan: #F7C797;
 $dark-blue: #363691;
 $light-tan: #F7E1CB;
+$transparent-blue: transparentize($blue, 0.2);
+$white: #ffffff;
 
 main {
   @include outer-container;
