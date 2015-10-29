@@ -57,7 +57,7 @@ h2 {
   }
     
   a {
-      white-space: nowrap;
+    white-space: nowrap;
   }
 }
 
@@ -103,7 +103,7 @@ li:hover ul {
 .gradient {
   @include linear-gradient(to right, rgba(255, 255, 255, 1) 0%, 
     rgba(255, 255, 255, 0) 5%, rgba(255, 255, 255, 0) 95%, 
-    rgba(255, 255, 255, 1) 100%, $fallback: transparent);
+    rgba(255, 255, 255, 1) 100%, $fallback: $transparent);
   bottom: 0;
   height: 250px;
   left: 0;

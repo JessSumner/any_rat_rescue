@@ -4,6 +4,7 @@ $dark-blue: #363691;
 $light-tan: #F7E1CB;
 $transparent-blue: transparentize($blue, 0.2);
 $white: #ffffff;
+$transparent: transparent;
 
 main {
   @include outer-container;
@@ -40,8 +41,4 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   margin-top: 20px;
-}
-
-footer {
-
 }
