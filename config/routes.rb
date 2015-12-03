@@ -7,4 +7,5 @@ Rails.application.routes.draw do
 
   resources :rat_adoptions, only: [:index]
   resources :resources, only: [:index]
+  resources :adoption_applications, only: [:new, :create]
 end

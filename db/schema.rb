@@ -11,9 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< 676ec139c30c7f64cc0b329ecf57bbb0ea988147
 ActiveRecord::Schema.define(version: 0) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+=======
+ActiveRecord::Schema.define(version: 20151202000804) do
+
+# Could not dump table "adoption_applications" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
+>>>>>>> Adoption Application started
 
 end
