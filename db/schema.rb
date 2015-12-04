@@ -10,19 +10,33 @@
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
 # It's strongly recommended that you check this file into your version control system.
-
-
 ActiveRecord::Schema.define(version: 20151202000804) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "adoption_applications", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string   "name"
-    t.string   "address"
-    t.string   "city"
-    t.string   "cell"
-    t.string   "email"
+    t.string   "name",                      null: false
+    t.string   "address",                   null: false
+    t.string   "city",                      null: false
+    t.string   "cell",                      null: false
+    t.string   "state",                     null: false
+    t.string   "zip",                       null: false
+    t.string   "email",                     null: false
+    t.integer  "current_rat_count"
+    t.string   "current_rat_gender"
+    t.string   "current_rat_age"
+    t.integer  "previous_rat_count"
+    t.string   "previous_rat_lifespan"
+    t.string   "cause_of_death"
+    t.string   "vet_care"
+    t.string   "vet_name"
+    t.string   "cage_location"
+    t.string   "household_members"
+    t.string   "children_ages"
+    t.string   "additional_animals"
+    t.string   "interaction_time"
+    t.text     "preferred_characteristics"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 end
