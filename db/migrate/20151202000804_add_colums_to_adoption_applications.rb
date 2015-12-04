@@ -4,6 +4,6 @@ class AddColumsToAdoptionApplications < ActiveRecord::Migration
     add_column :adoption_applications, :address, :string
     add_column :adoption_applications, :city, :string
     add_column :adoption_applications, :cell, :string
-    add_column :adoption_applications, :email, :email
+    add_column :adoption_applications, :email, :string
   end
 end
