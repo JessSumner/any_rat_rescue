@@ -16,6 +16,7 @@ class CreateAdoptionApplications < ActiveRecord::Migration
       t.string :cause_of_death
       t.string :vet_care
       t.string :vet_name
+      t.text :cage_description
       t.string :cage_location
       t.string :household_members
       t.string :children_ages
