@@ -13,6 +13,7 @@ gem 'high_voltage'
 gem 'bourbon'
 gem 'neat'
 gem 'petfinder'
+gem 'dependent-fields-rails'
 
 group :development, :test do
   gem 'byebug'
