@@ -29,7 +29,7 @@
     
     <div class="radio_right">
         <%= radio_button_tag(:current_rats, "no", true) %>
-        <%= label_tag(:current_rats_no, "I do not currently own any rats") %><br />
+        <%= label_tag(:current_rats_no, "I do not currently own any rats") %>
     </div>
     
     <div class="js-dependent-fields" data-radio-name='current_rats' data-radio-value='yes'>
@@ -75,8 +75,8 @@
         Note: Your free adoption bag and our website include several vet choices around the Valley<br />
     </div>
     
-    <%= f.label "Please describe the cage and include dimensions:" %>
-    <%= f.text_field :cage_description %><br />
+    <%= f.label "Please describe your cage and include dimensions:" %>
+    <%= f.text_area :cage_description, rows: 6 %><br />
 
     <div class="note">
         Note: Any Rat Rescue has roomy new and used cages available for a donation.<br />
@@ -98,7 +98,7 @@
     <%= f.text_field :interaction_time %><br />
 
     <%= f.label "Preferred characteristics for your new rattie companions and other comments:" %>
-    <%= f.text_field :preferred_characteristics %><br />
+    <%= f.text_area :preferred_characteristics, rows: 6 %><br />
     
     <div class="Submit">
         <%= f.submit "Submit Adoption Application"%>
