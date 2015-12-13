@@ -14,6 +14,7 @@ gem 'bourbon'
 gem 'neat'
 gem 'petfinder'
 gem 'dependent-fields-rails'
+gem 'underscore-rails'
 
 group :development, :test do
   gem 'byebug'

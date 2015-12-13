@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require underscore
 //= require turbolinks
+//= require dependent-fields
 //= require_tree .
-
-$(function(){ $(document).foundation(); });

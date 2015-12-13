@@ -2,78 +2,105 @@
   <h1> Adoption Application </h1>
 
   <%= form_for @adoption_application do |f| %>
-    <%= f.label :name %>:
-    <%= f.text_field :name %><br />
-
-    <%= f.label :address %>:
-    <%= f.text_field :address %><br />
-
-    <%= f.label :city %>:
-    <%= f.text_field :city %><br />
-
-    <%= f.label :state %>:
-    <%= f.select :state, options_for_select(us_states) %></br />
-
-    <%= f.label :zip %>:
-    <%= f.text_field :zip %><br />
-
-    <%= f.label :cell %>:
-    <%= f.text_field :cell %><br />
-
-    <%= f.label :email %>:
-    <%= f.text_field :email %><br />
-
-    <%= f.label :number_of_current_rats %>:
-    <%= f.text_field :current_rat_count %><br />
-
-    <%= f.label :gender %>:
-    <%= f.text_field :current_rat_gender %><br />
-
-    <%= f.label :ages %>:
-    <%= f.text_field :current_rat_age %><br />
-
-    <%= f.label :how_many_rats_have_you_had_before %>?
-    <%= f.text_field :previous_rat_count %><br />
-
-    <%= f.label :how_long_did_they_live %>?
-    <%= f.text_field :previous_rat_lifespan %><br />
-
-    <%= f.label :what_caused_them_to_pass %>?
-    <%= f.text_field :cause_of_death %><br />
-
-    <%= f.label :will_you_provide_vet_care_when_needed %>?
-    <%= f.text_field :vet_care %><br />
-
-    <%= f.label :name_of_vet_and_vet_practice %>:
-    <%= f.text_field :vet_name %><br />
-    <div class="note">
-      Note: Your free adoption bag and our website include several vet choices around the Valley<br />
+    <div class="full_width">
+        <%= f.label "name:" %>
+        <%= f.text_field :name %><br />
     </div>
+    <div class="medium_field">
+        <%= f.label "address:" %>
+        <%= f.text_field :address %>
+    </div>
+    <div class="medium_field">
+        <%= f.label "city:" %>
+        <%= f.text_field :city %><br />
+    </div>
+        <%= f.label "state:" %>
+        <%= f.select :state, options_for_select(us_states) %>
 
-    <%= f.label :describe_the_cage_please_include_dimensions %>:
+        <%= f.label "zip:" %>
+        <%= f.text_field :zip %><br />
+
+        <%= f.label "cell:" %>
+        <%= f.text_field :cell %><br />
+
+        <%= f.label "email:" %>
+        <%= f.text_field :email %><br />
+    <div class="radio_left"> 
+        <%= radio_button_tag(:current_rats, "yes") %>
+        <%= label_tag(:current_rats_yes, "I currently own one or more rats") %>
+    </div>
+    <div class="radio_right">
+        <%= radio_button_tag(:current_rats, "no", true) %>
+        <%= label_tag(:current_rats_no, "I do not currently own any rats") %><br />
+    </div>
+    <div class="js-dependent-fields" data-radio-name='current_rats' data-radio-value='yes'>
+
+        <%= f.label "number_of_current_rats:" %>
+        <%= f.text_field :current_rat_count %><br />
+
+        <%= f.label "gender:" %>
+        <%= f.text_field :current_rat_gender %><br />
+
+        <%= f.label "ages:" %>
+        <%= f.text_field :current_rat_age %><br />
+
+    </div>
+    <div class="radio_left">
+        <%= radio_button_tag(:previous_rats, "yes") %>
+        <%= label_tag(:previous_rats_yes, "I have previously owned one or more rats") %>
+    </div>
+    <div class="radio_right">
+        <%= radio_button_tag(:previous_rats, "no", true) %>
+        <%= label_tag(:previous_rats_no, "I have never owned any rats") %><br />
+    </div>
+    <div class="js-dependent-fields" data-radio-name='previous_rats' data-radio-value='yes'>
+
+        <%= f.label "How many rats have you had before?" %>
+        <%= f.text_field :previous_rat_count %><br />
+
+        <%= f.label "How long did they live?" %>
+        <%= f.text_field :previous_rat_lifespan %><br />
+
+        <%= f.label "What caused them to pass?" %>
+        <%= f.text_field :cause_of_death %><br />
+    </div>
+    <div class="full_width">
+        <%= f.label "Will you provide vet care when needed?" %>
+        <%= f.text_field :vet_care %><br />
+
+        <%= f.label "Name of vet and vet practice:" %>
+        <%= f.text_field :vet_name %><br />
+    </div>
+    <div class="note">
+        Note: Your free adoption bag and our website include several vet choices around the Valley<br />
+    </div>
+    <div class="full_width">
+    <%= f.label "Please describe the cage and include dimensions:" %>
     <%= f.text_field :cage_description %><br />
-
-    <div class="note">
-      Note: Any Rat Rescue has roomy new and used cages available for a donation.<br />
     </div>
-    <%= f.label :where_will_your_cage_be_located %>?
+    <div class="note">
+        Note: Any Rat Rescue has roomy new and used cages available for a donation.<br />
+    </div>
+    
+    <%= f.label "Where will your cage be located?" %>
     <%= f.text_field :cage_location %><br />
 
-    <%= f.label :please_list_all_household_members %>:
+    <%= f.label "Please list all household members:" %>
     <%= f.text_field :household_members %><br />
 
-    <%= f.label :childrens_ages %>:
+    <%= f.label "Children's ages:" %>
     <%= f.text_field :children_ages %><br />
 
-    <%= f.label :additional_animals_in_your_home %>:
+    <%= f.label "Are there any other animals in your home?" %>
     <%= f.text_field :additional_animals %><br />
 
-    <%= f.label :will_you_spend_at_least_an_hour_daily_interacting_with_the_rats_outside_their_cage %>?
+    <%= f.label "Will you spend at least an hour daily interacting with the rats outside their cage?" %>
     <%= f.text_field :interaction_time %><br />
 
-    <%= f.label :preferred_characteristics_for_your_new_rattie_companions_and_other_comments %>:
+    <%= f.label "Preferred characteristics for your new rattie companions and other comments:" %>
     <%= f.text_field :preferred_characteristics %><br />
-
-    <%= f.submit %>
-  </div>
-<% end %>
+    <div class="Submit">
+        <%= f.submit "Submit Adoption application"%>
+    </div>
+    <% end %>
+</div>
