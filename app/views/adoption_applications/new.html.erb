@@ -1,40 +1,38 @@
-<div class="form_body">
-  <h1> Adoption Application </h1>
-
+<h1> Adoption Application </h1>
+<div class="form_questions">
   <%= form_for @adoption_application do |f| %>
-    <div class="full_width">
-        <%= f.label "name:" %>
-        <%= f.text_field :name %><br />
-    </div>
-    <div class="medium_field">
-        <%= f.label "address:" %>
-        <%= f.text_field :address %>
-    </div>
-    <div class="medium_field">
-        <%= f.label "city:" %>
-        <%= f.text_field :city %><br />
-    </div>
-        <%= f.label "state:" %>
-        <%= f.select :state, options_for_select(us_states) %>
+    <%= f.label "name:" %>
+    <%= f.text_field :name %><br />
 
-        <%= f.label "zip:" %>
-        <%= f.text_field :zip %><br />
+    <%= f.label "address:" %>
+    <%= f.text_field :address %><br />
 
-        <%= f.label "cell:" %>
-        <%= f.text_field :cell %><br />
+    <%= f.label "city:" %>
+    <%= f.text_field :city %><br />
 
-        <%= f.label "email:" %>
-        <%= f.text_field :email %><br />
+    <%= f.label "state:" %>
+    <%= f.select :state, options_for_select(us_states) %><br />
+
+    <%= f.label "zip:" %>
+    <%= f.text_field :zip %><br />
+
+    <%= f.label "cell:" %>
+    <%= f.text_field :cell %><br />
+
+    <%= f.label "email:" %>
+    <%= f.text_field :email %><br />
+    
     <div class="radio_left"> 
         <%= radio_button_tag(:current_rats, "yes") %>
         <%= label_tag(:current_rats_yes, "I currently own one or more rats") %>
     </div>
+    
     <div class="radio_right">
         <%= radio_button_tag(:current_rats, "no", true) %>
         <%= label_tag(:current_rats_no, "I do not currently own any rats") %><br />
     </div>
+    
     <div class="js-dependent-fields" data-radio-name='current_rats' data-radio-value='yes'>
-
         <%= f.label "number_of_current_rats:" %>
         <%= f.text_field :current_rat_count %><br />
 
@@ -43,16 +41,18 @@
 
         <%= f.label "ages:" %>
         <%= f.text_field :current_rat_age %><br />
-
     </div>
+    
     <div class="radio_left">
         <%= radio_button_tag(:previous_rats, "yes") %>
         <%= label_tag(:previous_rats_yes, "I have previously owned one or more rats") %>
     </div>
+    
     <div class="radio_right">
         <%= radio_button_tag(:previous_rats, "no", true) %>
         <%= label_tag(:previous_rats_no, "I have never owned any rats") %><br />
     </div>
+    
     <div class="js-dependent-fields" data-radio-name='previous_rats' data-radio-value='yes'>
 
         <%= f.label "How many rats have you had before?" %>
@@ -64,20 +64,20 @@
         <%= f.label "What caused them to pass?" %>
         <%= f.text_field :cause_of_death %><br />
     </div>
-    <div class="full_width">
-        <%= f.label "Will you provide vet care when needed?" %>
-        <%= f.text_field :vet_care %><br />
+    
+    <%= f.label "Will you provide vet care when needed?" %>
+    <%= f.text_field :vet_care %><br />
 
-        <%= f.label "Name of vet and vet practice:" %>
-        <%= f.text_field :vet_name %><br />
-    </div>
+    <%= f.label "Name of vet and vet practice:" %>
+    <%= f.text_field :vet_name %><br />
+    
     <div class="note">
         Note: Your free adoption bag and our website include several vet choices around the Valley<br />
     </div>
-    <div class="full_width">
+    
     <%= f.label "Please describe the cage and include dimensions:" %>
     <%= f.text_field :cage_description %><br />
-    </div>
+
     <div class="note">
         Note: Any Rat Rescue has roomy new and used cages available for a donation.<br />
     </div>
@@ -99,8 +99,9 @@
 
     <%= f.label "Preferred characteristics for your new rattie companions and other comments:" %>
     <%= f.text_field :preferred_characteristics %><br />
+    
     <div class="Submit">
-        <%= f.submit "Submit Adoption application"%>
+        <%= f.submit "Submit Adoption Application"%>
     </div>
-    <% end %>
+  <% end %>
 </div>

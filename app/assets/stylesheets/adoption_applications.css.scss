@@ -3,11 +3,14 @@ h1 {
   padding-top: 10px;
 }
 
-.form_body {
+.form_questions {
+  @include span-columns(9);
+  @include shift(2.5);
 }
 
 .note {
+  @include span-columns(9);
+  @include shift(0);
   color: $dark-blue;
   text-align: center;
-
 }
