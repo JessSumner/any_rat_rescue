@@ -17,6 +17,8 @@ h1 {
   width: 100%;
 }
 
-.new_adoption_application {
-
+.field_with_errors {
+  input {
+    border: 2px solid $red;
+  }
 }
