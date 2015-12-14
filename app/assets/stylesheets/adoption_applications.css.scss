@@ -22,3 +22,27 @@ h1 {
     border: 2px solid $red;
   }
 }
+
+#error_explanation {
+  @include span-columns(8);
+  @include shift(2);
+  background-color: $error-color;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+
+  h2 {
+    font-size: 16px;
+    color: $red;
+    padding-left: 20px;
+    padding-top: 10px;
+  }
+
+  ul {
+    list-style-type: circle;
+    padding-left: 40px;
+  }
+
+  li {
+    color: $red;
+  }
+}
