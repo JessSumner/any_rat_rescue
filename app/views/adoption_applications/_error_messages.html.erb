@@ -1,0 +1,12 @@
+<div id="error_explanation">
+  <h2>
+    <%= pluralize(@adoption_application.errors.count, "error") %> 
+    prevented your application from being submitted:
+  </h2>
+
+  <ul>
+    <% @adoption_application.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>

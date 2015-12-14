@@ -8,9 +8,11 @@ class CreateAdoptionApplications < ActiveRecord::Migration
       t.string :state, null: false
       t.string :zip, null: false
       t.string :email, null: false
+      t.string :current_rats
       t.integer :current_rat_count
       t.string :current_rat_gender
       t.string :current_rat_age
+      t.string :previous_rats
       t.integer :previous_rat_count
       t.string :previous_rat_lifespan
       t.string :cause_of_death
@@ -23,7 +25,7 @@ class CreateAdoptionApplications < ActiveRecord::Migration
       t.string :additional_animals
       t.string :interaction_time
       t.text :preferred_characteristics
-
+      
       t.timestamps null: false
     end
   end
