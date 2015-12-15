@@ -16,7 +16,7 @@
     <%= f.text_field :city %>
 
     <%= f.label :state %>
-    <%= f.select :state, options_for_select(us_states) %>
+    <%= f.select :state, options_for_select(us_states) %></br>
 
     <%= f.label :zip %>
     <%= f.text_field :zip %>
@@ -27,12 +27,10 @@
     <%= f.label :email %>
     <%= f.text_field :email %>
     
-    <div class="radio_left"> 
+    <div class="radio"> 
         <%= radio_button_tag(:current_rats, "yes") %>
-        <%= label_tag(:current_rats_yes, "I currently own one or more rats") %>
-    </div>
+        <%= label_tag(:current_rats_yes, "I currently own one or more rats") %></br>
     
-    <div class="radio_right">
         <%= radio_button_tag(:current_rats, "no", true) %>
         <%= label_tag(:current_rats_no, "I do not currently own any rats") %>
     </div>
@@ -48,12 +46,10 @@
         <%= f.text_field :current_rat_age %>
     </div>
     
-    <div class="radio_left">
+    <div class="radio">
         <%= radio_button_tag(:previous_rats, "yes") %>
-        <%= label_tag(:previous_rats_yes, "I have previously owned one or more rats") %>
-    </div>
+        <%= label_tag(:previous_rats_yes, "I have previously owned one or more rats") %></br>
     
-    <div class="radio_right">
         <%= radio_button_tag(:previous_rats, "no", true) %>
         <%= label_tag(:previous_rats_no, "I have never owned any rats") %>
     </div>
