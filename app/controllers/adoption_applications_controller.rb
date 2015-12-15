@@ -6,11 +6,11 @@ class AdoptionApplicationsController < ApplicationController
   def create
     @adoption_application = AdoptionApplication.new(adoption_application_params)
     if @adoption_application.save
-      flash[:success] = 
+      flash[:success] =
         "Thank you for submitting an application. We will contact you shortly."
       redirect_to rat_adoptions_path
     else
-      flash[:error] = 
+      flash[:error] =
         "Please review your application, some information is missing."
       render :new
     end

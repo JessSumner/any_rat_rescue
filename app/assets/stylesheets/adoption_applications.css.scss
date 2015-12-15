@@ -3,7 +3,7 @@ h1 {
   padding-top: 30px;
 }
 
-.form_questions {
+.form-questions {
   @include span-columns(8);
   @include shift(2);
 }
@@ -31,7 +31,7 @@ h1 {
   }
 }
 
-#error_explanation {
+#error-explanation {
   @include span-columns(8);
   @include shift(2);
   background-color: $error-color;
@@ -39,8 +39,8 @@ h1 {
   padding-bottom: 10px;
 
   h2 {
-    font-size: 16px;
     color: darken($error-color, 60%);
+    font-size: 16px;
     padding-left: 20px;
     padding-top: 10px;
   }
