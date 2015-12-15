@@ -25,7 +25,6 @@ class CreateAdoptionApplications < ActiveRecord::Migration
       t.string :additional_animals
       t.string :interaction_time
       t.text :preferred_characteristics
-      
       t.timestamps null: false
     end
   end

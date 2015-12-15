@@ -1,0 +1,21 @@
+en:
+  hello: "Hello world"
+
+  helpers:
+    label:
+      adoption_application:
+        current_rat_count: "How many rats do you currently have?"
+        current_rat_gender: "What gender are they?"
+        current_rat_age: "What are their ages?"
+        previous_rat_count: "How many rats have you had before?"
+        previous_rat_lifespan: "How long did they live?"
+        cause_of_death: "What caused them to pass?"
+        vet_care: "Will you provide vet care when needed?"
+        vet_name: "Name of vet and vet practice"
+        cage_description: "Please describe your cage and include dimensions"
+        cage_location: "Where will your cage be located?"
+        household_members: "Please list all household members:"
+        children_ages: "If you have children, how old are they?"
+        additional_animals: "Are there any other animals in your home?"
+        interaction_time: "Will you spend at least an hour daily interacting with the rats outside their cage?"
+        preferred_characteristics: "Preferred characteristics for your new rattie companions and other comments"

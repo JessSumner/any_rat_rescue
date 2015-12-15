@@ -6,25 +6,25 @@
 
 <div class="form_questions">
   <%= form_for @adoption_application do |f| %>
-    <%= f.label "name:" %>
+    <%= f.label :name %>
     <%= f.text_field :name %>
 
-    <%= f.label "address:" %>
+    <%= f.label :address %>
     <%= f.text_field :address %>
 
-    <%= f.label "city:" %>
+    <%= f.label :city %>
     <%= f.text_field :city %>
 
-    <%= f.label "state:" %>
+    <%= f.label :state %>
     <%= f.select :state, options_for_select(us_states) %>
 
-    <%= f.label "zip:" %>
+    <%= f.label :zip %>
     <%= f.text_field :zip %>
 
-    <%= f.label "cell:" %>
+    <%= f.label :cell %>
     <%= f.text_field :cell %>
 
-    <%= f.label "email:" %>
+    <%= f.label :email %>
     <%= f.text_field :email %>
     
     <div class="radio_left"> 
@@ -38,13 +38,13 @@
     </div>
     
     <div class="js-dependent-fields" data-radio-name='current_rats' data-radio-value='yes'>
-        <%= f.label "number_of_current_rats:" %>
+        <%= f.label :current_rat_count %>
         <%= f.text_field :current_rat_count %>
 
-        <%= f.label "gender:" %>
+        <%= f.label :current_rat_gender %>
         <%= f.text_field :current_rat_gender %>
 
-        <%= f.label "ages:" %>
+        <%= f.label :current_rat_age %>
         <%= f.text_field :current_rat_age %>
     </div>
     
@@ -60,49 +60,49 @@
     
     <div class="js-dependent-fields" data-radio-name='previous_rats' data-radio-value='yes'>
 
-        <%= f.label "How many rats have you had before?" %>
+        <%= f.label :previous_rat_count %>
         <%= f.text_field :previous_rat_count %>
 
-        <%= f.label "How long did they live?" %>
+        <%= f.label :previous_rat_lifespan %>
         <%= f.text_field :previous_rat_lifespan %>
 
-        <%= f.label "What caused them to pass?" %>
+        <%= f.label :cause_of_death %>
         <%= f.text_field :cause_of_death %>
     </div>
     
-    <%= f.label "Will you provide vet care when needed?" %>
+    <%= f.label :vet_care %>
     <%= f.text_field :vet_care %>
 
-    <%= f.label "Name of vet and vet practice:" %>
+    <%= f.label :vet_name %>
     <%= f.text_field :vet_name %>
     
     <div class="note">
         Note: Your free adoption bag and our website include several vet choices around the Valley
     </div>
     
-    <%= f.label "Please describe your cage and include dimensions:" %>
+    <%= f.label :cage_description %>
     <%= f.text_area :cage_description, rows: 6 %>
 
     <div class="note">
         Note: Any Rat Rescue has roomy new and used cages available for a donation.
     </div>
     
-    <%= f.label "Where will your cage be located?" %>
+    <%= f.label :cage_location %>
     <%= f.text_field :cage_location %>
 
-    <%= f.label "Please list all household members:" %>
+    <%= f.label :household_members %>
     <%= f.text_field :household_members %>
 
-    <%= f.label "Children's ages:" %>
+    <%= f.label :children_ages %>
     <%= f.text_field :children_ages %>
 
-    <%= f.label "Are there any other animals in your home?" %>
+    <%= f.label :additional_animals %>
     <%= f.text_field :additional_animals %>
 
-    <%= f.label "Will you spend at least an hour daily interacting with the rats outside their cage?" %>
+    <%= f.label :interaction_time %>
     <%= f.text_field :interaction_time %>
 
-    <%= f.label "Preferred characteristics for your new rattie companions and other comments:" %>
+    <%= f.label :preferred_characteristics %>
     <%= f.text_area :preferred_characteristics, rows: 6 %>
     
     <div class="Submit">
