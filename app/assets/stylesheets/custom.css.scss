@@ -10,35 +10,6 @@ main {
   @include outer-container;
 }
 
-.text-with-side-image {
-  @include outer-container;
-  @include span-columns(12);
-  .side-image {
-    @include span-columns(3 of 12);
-    margin-right: 117px;
-    margin-top: 100px;
-    .block-text {
-      @include span-columns (5 of 12);
-      text-align: justify;
-    }
-  }
-}
-
 body {
   margin: 0;
-}
-
-.block-text {
-  @include span-columns(5);
-  text-align: justify;
-}
-
-.notice {
-  @include span-columns(4);
-  background-color: $light-tan;
-  text-align: justify;
-  outline-color: $dark-blue;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-top: 20px;
 }
