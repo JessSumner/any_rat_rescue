@@ -1,3 +1,3 @@
 $(document).ready(function() {
-  DependentFields.bind();
+  DependentFields.bind()
 });
