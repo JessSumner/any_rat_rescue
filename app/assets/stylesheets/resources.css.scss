@@ -3,6 +3,7 @@
 }
 
 h3 {
+  font-family: $base-font-family;
   margin: 10px 0 10px 5px;
 }
   
@@ -27,6 +28,14 @@ h3 {
     position: absolute;
   }
 
+  img {
+    bottom: 10px;
+    height: auto;
+    left: 200px;
+    position: absolute;
+    max-width: 300px;
+  }
+
   .vet-details-left {
     @include span-columns(3 of 6);
     @include pad();
@@ -45,6 +54,7 @@ h3 {
 
 .resource-title {
   @include span-columns(12);
+  margin: 20px 0;
 }
 
 .resource-cards-small {

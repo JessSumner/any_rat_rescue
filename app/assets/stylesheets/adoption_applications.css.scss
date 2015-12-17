@@ -1,11 +1,14 @@
 h1 {
-  font-family: 'Architects Daughter', cursive;
   padding-top: 30px;
 }
 
 .form-questions {
   @include span-columns(8);
   @include shift(2);
+}
+
+.select {
+  padding-top: 10px;
 }
 
 .radio {

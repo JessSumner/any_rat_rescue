@@ -2,7 +2,7 @@
   description: "Northwest Pet Clinic\nTwo locations:\n6745 N La Canada Dr,\n252 W Ina Rd,"
   website: "http://www.northwestpetclinic.com"
   phone: "520-742-4148"
-  map: ""
+  vetlogo: "northwest-pet-clinic-logo.png"
 - name: "Dr. ShanAnne Edwards"
   description: "Arizona Small Animal Clinic\n10 E 31st St,\nTucson, AZ 85213"
   website: "http://www.azsmallanimalclinic.com"

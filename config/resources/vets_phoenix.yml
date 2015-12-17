@@ -7,7 +7,8 @@
   description: "Valleywide mobile service"
   website: "http://www.desertbloom-mobilevet.com"
   phone: "480-839-2824"
-- name: "Arrowhead Ranch Animal Hospital"
+  vetlogo: "desert-bloom-logo.png"
+- name: Arrowhead Ranch Animal Hospital
   description: "6750 W. Deer Valley Rd. Ste. C101,\nGlendale, AZ 85310"
   website: "http://www.arrowheadranchah.com"
   phone: "623-561-2677"
@@ -61,3 +62,4 @@
   description: "Locations: Avondale, Gilbert, Peoria, Phoenix and Scottsdale\nOpen 24 hours"
   website: "http://www.eac-az.com"
   phone: ""
+  vetlogo: "emergency-animal-clinic.png"
