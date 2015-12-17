@@ -1,16 +1,18 @@
 .text-with-side-image {
   @include outer-container;
   @include span-columns(12);
+  
   .side-image {
     @include span-columns(3 of 12);
     border: outset;
-    border-width: thick;
     margin-right: 117px;
+    border-width: thick;
     margin-top: 100px;
-    .block-text {
+  }
+    
+  .block-text {
       @include span-columns (5 of 12);
       text-align: justify;
-    }
   }
 }
 
@@ -22,9 +24,9 @@
 .notice {
   @include span-columns(4);
   background-color: $light-tan;
-  text-align: justify;
+  margin-top: 20px;
   outline-color: $dark-blue;
   padding-left: 15px;
   padding-right: 15px;
-  margin-top: 20px;
+  text-align: justify;
 }
