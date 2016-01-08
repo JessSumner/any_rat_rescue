@@ -2,8 +2,16 @@
   text-align: center;
 }
 
-.block-text-volunteer {
-  @include span-columns(7);
-  @include shift(2.5);
-  text-align: justify;
+.volunteer-text-images {
+  @include span-columns(12);
+
+  .volunteer-text {
+    @include span-columns(6 of 12);
+    @include shift(0.5);
+    text-align: justify;
+  }
+
+  .volunteer-image {
+    @include span-columns(3 of 12);
+  }
 }
