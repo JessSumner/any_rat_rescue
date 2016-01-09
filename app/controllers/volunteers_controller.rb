@@ -1,4 +1,4 @@
 class VolunteersController < ApplicationController
-  def index
+  def show
   end
 end
