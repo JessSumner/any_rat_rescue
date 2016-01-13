@@ -1,0 +1,115 @@
+<%= form_for @foster_application do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+
+  <%= f.label :city %>
+  <%= f.text_field :city %>
+
+  <div class="select">
+    <%= f.label :state %>
+    <%= f.select :state, options_for_select(us_states) %></br>
+  </div>
+
+  <%= f.label :zip %>
+  <%= f.text_field :zip %>
+
+  <%= f.label :phone %>
+  <%= f.text_field :phone %>
+
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+
+  <%= f.label :reason_for_volunteering %>
+  <%= f.text_area :reason_for_volunteering, rows: 6 %>
+  
+  <div class="radio"> 
+    <%= radio_button_tag(:volunteering_type, "foster", true ) %>
+    <%= label_tag(:volunteering_type_foster, "I would like to be a foster home") %></br>
+
+    <%= radio_button_tag(:volunteering_type, "quarantine") %>
+    <%= label_tag(:volunteering_type_quarantine, "I would like to be a quarantine home") %></br>
+
+    <%= radio_button_tag(:volunteering_type, "either", true ) %>
+    <%= label_tag(:volunteering_type_either, "I would like to foster or quarantine") %></br>
+  </div>
+
+  <%= f.label :rat_cage_location %>
+  <%= f.text_field :rat_cage_location %>
+
+  <div class="radio">
+    <%= radio_button_tag(:transportation, "yes", true ) %>
+    <%= label_tag(:transportation_yes, "I have my own car") %></br>
+
+    <%= radio_button_tag(:transportation, "no" ) %>
+    <%= label_tag(:transportation_no, "I do not have my own car") %></br>
+  </div>
+
+  <div class="note">
+    Any Rat Rescue covers the cost for all veterinary treatment and medication for the rats in quarantine and foster homes. Instructions on how to administer medications safely and effectively will be provided.
+  </div>
+
+  <div class="radio">
+    <%= radio_button_tag(:vet_appointments, "yes", true) %>
+    <%= label_tag(:vet_appointments_yes, "I can keep vet appointments") %></br>
+
+    <%= radio_button_tag(:vet_appointments, "no") %>
+    <%= label_tag(:vet_appointments_no, "I can not keep vet appointments") %></br>
+  </div>
+
+  <div class="radio">
+  <%= radio_button_tag(:caring_for_ill_rats, "yes", true) %>
+  <%= label_tag(:caring_for_ill_rats_yes, "I am comfortable caring for sick or injured rats.") %></br>
+
+  <%= radio_button_tag(:caring_for_ill_rats, "no") %>
+  <%= label_tag(:caring_for_ill_rats_no, "I can not look after sick or injured rats.") %></br>
+  </div>
+
+  <div class="radio">
+  <%= radio_button_tag(:other_rats, "yes") %>
+  <%= label_tag(:other_rats_yes, "I currently own rats.") %></br>
+
+  <%= radio_button_tag(:other_rats, "no", true) %>
+  <%= label_tag(:other_rats_no, "I do not own any rats.") %></br>
+  </div>
+  
+  <div class="js-dependent-fields" data-radio-name='other_rats' data-radio-value='yes'>
+    <%= f.label :other_rats_number %>
+    <%= f.text_field :other_rats_number %>
+
+    <%= f.label :other_rats_gender %>
+    <%= f.text_field :other_rats_gender %>
+  </div>
+  
+  <div class="radio">
+    <%= radio_button_tag(:other_animals, "yes") %>
+    <%= label_tag(:other_animals_yes, "I have other animals in my home.") %></br>
+  
+    <%= radio_button_tag(:other_animals, "no", true) %>
+    <%= label_tag(:other_animals_no, "I do not have any other animals in my home.") %>
+  </div>
+  
+  <div class="js-dependent-fields" data-radio-name='other_animals' data-radio-value='yes'>
+    <%= f.label :other_animals_type %>
+    <%= f.text_field :other_animals_type %>
+
+    <%= f.label :other_animals_number %>
+    <%= f.text_field :other_animals_number %>
+  </div>
+  
+  <%= f.label :work_location %>
+  <%= f.text_field :work_location %>
+
+  <%= f.label :hours_away_from_home %>
+  <%= f.text_field :hours_away_from_home %>
+  
+  <%= f.label :rat_interaction_time %>
+  <%= f.text_field :rat_interaction_time %>
+  
+  <div class="Submit">
+    <%= f.submit "Submit Foster Application"%>
+  </div>
+<% end %>
+

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151214204426) do
+ActiveRecord::Schema.define(version: 20160113183204) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,33 @@ ActiveRecord::Schema.define(version: 20151214204426) do
     t.text     "preferred_characteristics"
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
+  end
+
+  create_table "foster_applications", force: :cascade do |t|
+    t.string   "name",                    null: false
+    t.string   "address",                 null: false
+    t.string   "city",                    null: false
+    t.string   "state",                   null: false
+    t.string   "zip",                     null: false
+    t.string   "phone",                   null: false
+    t.string   "email",                   null: false
+    t.text     "reason_for_volunteering"
+    t.string   "volunteering_type"
+    t.text     "rat_cage_location"
+    t.string   "transportation"
+    t.string   "vet_appointments"
+    t.string   "caring_for_ill_rats"
+    t.string   "other_rats"
+    t.string   "other_rats_number"
+    t.string   "other_rats_gender"
+    t.string   "other_animals"
+    t.string   "other_animals_type"
+    t.string   "other_animals_number"
+    t.string   "work_location"
+    t.string   "hours_away_from_home"
+    t.string   "rat_interaction_time"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
 end

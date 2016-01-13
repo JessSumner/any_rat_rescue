@@ -1,0 +1,9 @@
+<h1> Foster Application </h1>
+
+<% if @foster_application.errors.any? %>
+  <%= render "error_messages" %>
+<% end %>
+
+<div class="form-questions">
+  <%= render "foster_form_fields" %>
+</div>
