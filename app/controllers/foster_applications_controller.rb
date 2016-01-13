@@ -5,7 +5,7 @@ class FosterApplicationsController < ApplicationController
 
   def create
     @foster_application = FosterApplication.new(foster_application_params)
-    if @adoption_application.save
+    if @foster_application.save
       flash[:success] =
         "Thank you for submitting an application. We will contact you shortly."
       redirect_to volunteer_path

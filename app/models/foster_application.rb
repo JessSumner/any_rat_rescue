@@ -5,7 +5,7 @@ class FosterApplication < ActiveRecord::Base
   validates :name, presence: true
   validates :address, presence: true
   validates :city, presence: true
-  validates :cell, presence: true, format: {
+  validates :phone, presence: true, format: {
                      with: VALID_PHONE_REGEX,
                      message: "Please enter phone number without spaces or hyphens."
                    }
