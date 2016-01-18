@@ -22,7 +22,7 @@
   <%= f.label :email %>
   <%= f.text_field :email %>
 
-  <%= f.label :reason_for_volunteering %>
+  <%= f.label :reason_for_volunteering, 'Why do you want to quarantine or foster?' %>
   <%= f.text_area :reason_for_volunteering, rows: 6 %>
   
   <div class="radio"> 
@@ -36,7 +36,7 @@
     <%= label_tag(:volunteering_type_either, "I would like to foster or quarantine") %></br>
   </div>
 
-  <%= f.label :rat_cage_location %>
+  <%= f.label :rat_cage_location, "Where will the rat cage be located?" %>
   <%= f.text_field :rat_cage_location %>
 
   <div class="radio">
@@ -76,10 +76,10 @@
   </div>
   
   <div class="js-dependent-fields" data-radio-name='other_rats' data-radio-value='yes'>
-    <%= f.label :other_rats_number %>
+    <%= f.label :other_rats_number, "How many other rats do you currently own?" %>
     <%= f.text_field :other_rats_number %>
 
-    <%= f.label :other_rats_gender %>
+    <%= f.label :other_rats_gender, "What gender are your other rats?" %>
     <%= f.text_field :other_rats_gender %>
   </div>
   
@@ -92,20 +92,20 @@
   </div>
   
   <div class="js-dependent-fields" data-radio-name='other_animals' data-radio-value='yes'>
-    <%= f.label :other_animals_type %>
+    <%= f.label :other_animals_type, "What kind of other animals do you have in your home?" %>
     <%= f.text_field :other_animals_type %>
 
-    <%= f.label :other_animals_number %>
+    <%= f.label :other_animals_number, "How many other animals do you own?" %>
     <%= f.text_field :other_animals_number %>
   </div>
   
-  <%= f.label :work_location %>
+  <%= f.label :work_location, "Do you work away from home?" %>
   <%= f.text_field :work_location %>
 
-  <%= f.label :hours_away_from_home %>
+  <%= f.label :hours_away_from_home, "How long are you away from home per day?" %>
   <%= f.text_field :hours_away_from_home %>
   
-  <%= f.label :rat_interaction_time %>
+  <%= f.label :rat_interaction_time, "Will you be able to spend at least an hour with the rats a day?" %>
   <%= f.text_field :rat_interaction_time %>
   
   <div class="Submit">
