@@ -1,7 +1,7 @@
 <h1> Foster Application </h1>
 
 <% if @foster_application.errors.any? %>
-  <%= render "error_messages" %>
+  <%= render "error_messages/error_messages", object: @foster_application %>
 <% end %>
 
 <div class="form-questions">
