@@ -5,7 +5,7 @@ class VolunteerApplicationsController < ApplicationController
 
   def create
     @volunteer_application = VolunteerApplication.new
-                              (volunteer_application_params)
+                             (volunteer_application_params)
     if @volunteer_application.save
       flash.now[:success] =
         "Thank you for submitting an application. We will contact you shortly."

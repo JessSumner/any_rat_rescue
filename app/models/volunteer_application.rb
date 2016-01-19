@@ -7,7 +7,7 @@ class VolunteerApplication < ActiveRecord::Base
   validates :city, presence: true
   validates :cell, presence: true, format: {
                      with: VALID_PHONE_REGEX,
-                     message: "Please enter phone number without spaces or 
+                     message: "Please enter phone number without spaces or
                               hyphens."
                    }
   validates :email, presence: true,
