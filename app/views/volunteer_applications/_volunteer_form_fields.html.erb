@@ -22,18 +22,22 @@
   <%= f.label :email %>
   <%= f.text_field :email %>
 
-  <%= f.label :reason_for_volunteering, 'Why do you want to quarantine or foster?' %>
+  <%= f.label :reason_for_volunteering, "Why do you want to quarantine or 
+                                        foster?" %>
   <%= f.text_area :reason_for_volunteering, rows: 6 %>
   
   <div class="radio"> 
     <%= radio_button_tag(:volunteering_type, "foster", true ) %>
-    <%= label_tag(:volunteering_type_foster, "I would like to be a foster home") %></br>
+    <%= label_tag(:volunteering_type_foster, "I would like to be a foster home"
+        ) %></br>
 
     <%= radio_button_tag(:volunteering_type, "quarantine") %>
-    <%= label_tag(:volunteering_type_quarantine, "I would like to be a quarantine home") %></br>
+    <%= label_tag(:volunteering_type_quarantine, "I would like to be a 
+                                                  quarantine home") %></br>
 
     <%= radio_button_tag(:volunteering_type, "either", true ) %>
-    <%= label_tag(:volunteering_type_either, "I would like to foster or quarantine") %></br>
+    <%= label_tag(:volunteering_type_either, "I would like to foster or 
+                                              quarantine") %></br>
   </div>
 
   <%= f.label :rat_cage_location, "Where will the rat cage be located?" %>
@@ -48,7 +52,8 @@
   </div>
 
   <div class="note">
-    Any Rat Rescue covers the cost for all veterinary treatment and medication for the rats in quarantine and foster homes. 
+    Any Rat Rescue covers the cost for all veterinary treatment and medication 
+    for the rats in quarantine and foster homes. 
   </div>
 
   <div class="radio">
@@ -56,19 +61,23 @@
     <%= label_tag(:vet_appointments_yes, "I can keep vet appointments") %></br>
 
     <%= radio_button_tag(:vet_appointments, "no") %>
-    <%= label_tag(:vet_appointments_no, "I can not keep vet appointments") %></br>
+    <%= label_tag(:vet_appointments_no, "I can not keep vet appointments") %>
+    </br>
   </div>
 
   <div class="note">
-    Instructions on how to administer medications safely and effectively will be provided.
+    Instructions on how to administer medications safely and effectively will 
+    be provided.
   </div>
 
   <div class="radio">
     <%= radio_button_tag(:caring_for_ill_rats, "yes", true) %>
-    <%= label_tag(:caring_for_ill_rats_yes, "I am comfortable caring for sick or injured rats.") %></br>
+    <%= label_tag(:caring_for_ill_rats_yes, "I am comfortable caring for sick 
+                                            or injured rats.") %></br>
 
     <%= radio_button_tag(:caring_for_ill_rats, "no") %>
-    <%= label_tag(:caring_for_ill_rats_no, "I can not look after sick or injured rats.") %></br>
+    <%= label_tag(:caring_for_ill_rats_no, "I can not look after sick or 
+                                            injured rats.") %></br>
   </div>
 
   <div class="radio">
@@ -79,8 +88,10 @@
     <%= label_tag(:other_rats_no, "I do not own any rats.") %></br>
   </div>
   
-  <div class="js-dependent-fields" data-radio-name='other_rats' data-radio-value='yes'>
-    <%= f.label :other_rats_count, "How many other rats do you currently own?" %>
+  <div class="js-dependent-fields" data-radio-name='other_rats' 
+                                   data-radio-value='yes'>
+    <%= f.label :other_rats_count, "How many other rats do you currently own?" 
+        %>
     <%= f.text_field :other_rats_count %>
 
     <%= f.label :other_rats_gender, "What gender are your other rats?" %>
@@ -92,14 +103,18 @@
   
   <div class="radio">
     <%= radio_button_tag(:other_animals, "yes") %>
-    <%= label_tag(:other_animals_yes, "I have other animals in my home.") %></br>
+    <%= label_tag(:other_animals_yes, "I have other animals in my home.") %>
+    </br>
   
     <%= radio_button_tag(:other_animals, "no", true) %>
-    <%= label_tag(:other_animals_no, "I do not have any other animals in my home.") %>
+    <%= label_tag(:other_animals_no, "I do not have any other animals in my 
+                                      home.") %></br>
   </div>
   
-  <div class="js-dependent-fields" data-radio-name='other_animals' data-radio-value='yes'>
-    <%= f.label :other_animals_type, "What kind of other animals do you have in your home?" %>
+  <div class="js-dependent-fields" data-radio-name='other_animals' 
+                                   data-radio-value='yes'>
+    <%= f.label :other_animals_type, "What kind of other animals do you have
+                                      in your home?" %>
     <%= f.text_field :other_animals_type %>
 
     <%= f.label :other_animals_count, "How many other animals do you own?" %>
@@ -108,40 +123,54 @@
   
   <div class="radio">
     <%= radio_button_tag(:work_location, "yes", true) %>
-    <%= label_tag(:work_location_yes, "I work away from home.") %>
+    <%= label_tag(:work_location_yes, "I work away from home.") %></br>
 
     <%= radio_button_tag(:work_location, "no") %>
-    <%= label_tag(:work_location_no, "I work from home.") %>
+    <%= label_tag(:work_location_no, "I work from home.") %></br>
   </div>
 
-  <%= f.label :hours_away_from_home, "How long are you away from home per day?" %>
+  <%= f.label :hours_away_from_home, "How long are you away from home per 
+                                      day?" %>
   <%= f.text_field :hours_away_from_home %>
   
-  <%= f.label :rat_interaction_time, "Will you be able to spend at least an hour with the rats a day?" %>
+  <%= f.label :rat_interaction_time, "Will you be able to spend at least an 
+                                      hour with the rats a day?" %>
   <%= f.text_field :rat_interaction_time %>
 
   <div class="note">
     <p>
-      Potential adopters will have already filled out an application and spoken with a member of Any Rat Rescue before they are able to meet with you. Any Rat Rescue respects your privacy and appreciates your help. Your contact information will only be shared with your permission and knowledge.
+      Potential adopters will have already filled out an application and spoken
+      with a member of Any Rat Rescue before they are able to meet with you.
+      Any Rat Rescue respects your privacy and appreciates your help. Your
+      contact information will only be shared with your permission and
+      knowledge.
     </p>
     <p>
-      Any Rat Rescue likes to acheive a smooth and quick adoption process however you will be given notice of an adoption meeting before it is confirmed.
+      Any Rat Rescue likes to acheive a smooth and quick adoption process
+      however you will be given notice of an adoption meeting before it is
+      confirmed.
     </p>
   </div>
 
   <div class="radio">
     <%= radio_button_tag :adoption_appointments, "yes", true %>
-    <%= label_tag :adoption_appointments_yes, "I will be able to meet with adopters for the rats I am caring for." %>
+    <%= label_tag :adoption_appointments_yes, "I will be able to meet with 
+                                              adopters for the rats I am caring
+                                              for." %></br>
 
     <%= radio_button_tag :adoption_appointments, "no" %>
-    <%= label_tag :adoption_appointments_no, "I will not be able to meet with adopters for the rats I am caring for." %>
+    <%= label_tag :adoption_appointments_no, "I will not be able to meet with 
+                                              adopters for the rats I am caring
+                                              for." %></br>
   </div>
 
   <div class="note">
     All supplies for an adoption will be provided by Any Rat Rescue.
   </div>
 
-  <%= f.label :comments_or_questions, "Is there any thing else you would like us to know? Or do you have any specific questions for us?" %>
+  <%= f.label :comments_or_questions, "Is there any thing else you would like
+                                      us to know? Or do you have any specific 
+                                      questions for us?" %>
   <%= f.text_area :comments_or_questions %>
   
   <div class="Submit">

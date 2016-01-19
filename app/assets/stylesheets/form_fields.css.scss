@@ -1,0 +1,21 @@
+.form-questions {
+  @include span-columns(8);
+  @include shift(2);
+}
+
+.select {
+  padding-top: 10px;
+}
+
+.radio {
+  padding: 10px 0;
+}
+
+.note {
+  @include span-columns(8);
+  @include shift(0);
+  color: $dark-blue;
+  padding: 10px 0 20px;
+  text-align: center;
+  width: 100%;
+}
