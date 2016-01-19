@@ -1,0 +1,9 @@
+<h1> Volunteer Application </h1>
+
+<% if @volunteer_application.errors.any? %>
+  <%= render "error_messages/error_messages", object: @volunteer_application %>
+<% end %>
+
+<div class="form-questions">
+  <%= render "volunteer_form_fields" %>
+</div>

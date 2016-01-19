@@ -1,4 +1,4 @@
-<%= form_for @foster_application do |f| %>
+<%= form_for @volunteer_application do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
 
@@ -16,8 +16,8 @@
   <%= f.label :zip %>
   <%= f.text_field :zip %>
 
-  <%= f.label :phone %>
-  <%= f.text_field :phone %>
+  <%= f.label :cell %>
+  <%= f.text_field :cell %>
 
   <%= f.label :email %>
   <%= f.text_field :email %>
@@ -48,7 +48,7 @@
   </div>
 
   <div class="note">
-    Any Rat Rescue covers the cost for all veterinary treatment and medication for the rats in quarantine and foster homes. Instructions on how to administer medications safely and effectively will be provided.
+    Any Rat Rescue covers the cost for all veterinary treatment and medication for the rats in quarantine and foster homes. 
   </div>
 
   <div class="radio">
@@ -59,28 +59,35 @@
     <%= label_tag(:vet_appointments_no, "I can not keep vet appointments") %></br>
   </div>
 
-  <div class="radio">
-  <%= radio_button_tag(:caring_for_ill_rats, "yes", true) %>
-  <%= label_tag(:caring_for_ill_rats_yes, "I am comfortable caring for sick or injured rats.") %></br>
-
-  <%= radio_button_tag(:caring_for_ill_rats, "no") %>
-  <%= label_tag(:caring_for_ill_rats_no, "I can not look after sick or injured rats.") %></br>
+  <div class="note">
+    Instructions on how to administer medications safely and effectively will be provided.
   </div>
 
   <div class="radio">
-  <%= radio_button_tag(:other_rats, "yes") %>
-  <%= label_tag(:other_rats_yes, "I currently own rats.") %></br>
+    <%= radio_button_tag(:caring_for_ill_rats, "yes", true) %>
+    <%= label_tag(:caring_for_ill_rats_yes, "I am comfortable caring for sick or injured rats.") %></br>
 
-  <%= radio_button_tag(:other_rats, "no", true) %>
-  <%= label_tag(:other_rats_no, "I do not own any rats.") %></br>
+    <%= radio_button_tag(:caring_for_ill_rats, "no") %>
+    <%= label_tag(:caring_for_ill_rats_no, "I can not look after sick or injured rats.") %></br>
+  </div>
+
+  <div class="radio">
+    <%= radio_button_tag(:other_rats, "yes") %>
+    <%= label_tag(:other_rats_yes, "I currently own rats.") %></br>
+
+    <%= radio_button_tag(:other_rats, "no", true) %>
+    <%= label_tag(:other_rats_no, "I do not own any rats.") %></br>
   </div>
   
   <div class="js-dependent-fields" data-radio-name='other_rats' data-radio-value='yes'>
-    <%= f.label :other_rats_number, "How many other rats do you currently own?" %>
-    <%= f.text_field :other_rats_number %>
+    <%= f.label :other_rats_count, "How many other rats do you currently own?" %>
+    <%= f.text_field :other_rats_count %>
 
     <%= f.label :other_rats_gender, "What gender are your other rats?" %>
     <%= f.text_field :other_rats_gender %>
+
+    <%= f.label :other_rats_age, "How old are your other rats?" %>
+    <%= f.text_field :other_rats_age %>
   </div>
   
   <div class="radio">
@@ -95,21 +102,49 @@
     <%= f.label :other_animals_type, "What kind of other animals do you have in your home?" %>
     <%= f.text_field :other_animals_type %>
 
-    <%= f.label :other_animals_number, "How many other animals do you own?" %>
-    <%= f.text_field :other_animals_number %>
+    <%= f.label :other_animals_count, "How many other animals do you own?" %>
+    <%= f.text_field :other_animals_count %>
   </div>
   
-  <%= f.label :work_location, "Do you work away from home?" %>
-  <%= f.text_field :work_location %>
+  <div class="radio">
+    <%= radio_button_tag(:work_location, "yes", true) %>
+    <%= label_tag(:work_location_yes, "I work away from home.") %>
+
+    <%= radio_button_tag(:work_location, "no") %>
+    <%= label_tag(:work_location_no, "I work from home.") %>
+  </div>
 
   <%= f.label :hours_away_from_home, "How long are you away from home per day?" %>
   <%= f.text_field :hours_away_from_home %>
   
   <%= f.label :rat_interaction_time, "Will you be able to spend at least an hour with the rats a day?" %>
   <%= f.text_field :rat_interaction_time %>
+
+  <div class="note">
+    <p>
+      Potential adopters will have already filled out an application and spoken with a member of Any Rat Rescue before they are able to meet with you. Any Rat Rescue respects your privacy and appreciates your help. Your contact information will only be shared with your permission and knowledge.
+    </p>
+    <p>
+      Any Rat Rescue likes to acheive a smooth and quick adoption process however you will be given notice of an adoption meeting before it is confirmed.
+    </p>
+  </div>
+
+  <div class="radio">
+    <%= radio_button_tag :adoption_appointments, "yes", true %>
+    <%= label_tag :adoption_appointments_yes, "I will be able to meet with adopters for the rats I am caring for." %>
+
+    <%= radio_button_tag :adoption_appointments, "no" %>
+    <%= label_tag :adoption_appointments_no, "I will not be able to meet with adopters for the rats I am caring for." %>
+  </div>
+
+  <div class="note">
+    All supplies for an adoption will be provided by Any Rat Rescue.
+  </div>
+
+  <%= f.label :comments_or_questions, "Is there any thing else you would like us to know? Or do you have any specific questions for us?" %>
+  <%= f.text_area :comments_or_questions %>
   
   <div class="Submit">
-    <%= f.submit "Submit Foster Application"%>
+    <%= f.submit "Submit Volunteer Application"%>
   </div>
 <% end %>
-
