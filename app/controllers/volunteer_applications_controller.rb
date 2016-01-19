@@ -4,13 +4,14 @@ class VolunteerApplicationsController < ApplicationController
   end
 
   def create
-    @volunteer_application = VolunteerApplication.new(volunteer_application_params)
+    @volunteer_application = VolunteerApplication.new
+                              (volunteer_application_params)
     if @volunteer_application.save
-      flash[:success] =
+      flash.now[:success] =
         "Thank you for submitting an application. We will contact you shortly."
       redirect_to volunteer_path
     else
-      flash[:error] =
+      flash.now[:error] =
         "Please review your application, some information is missing."
       render :new
     end
