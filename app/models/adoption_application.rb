@@ -1,5 +1,4 @@
 class AdoptionApplication < ActiveRecord::Base
-  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
   VALID_PHONE_REGEX = /[0-9]{10}/
   before_save :downcase_email
   validates :name, presence: true
@@ -10,8 +9,7 @@ class AdoptionApplication < ActiveRecord::Base
                      message: "Please enter phone number without spaces or
                               hyphens."
                    }
-  validates :email, presence: true,
-                    format: { with: VALID_EMAIL_REGEX }
+  validates :email, email: true, presence: true
 
   private
 

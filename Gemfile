@@ -15,6 +15,7 @@ gem 'neat'
 gem 'petfinder'
 gem 'dependent-fields-rails'
 gem 'underscore-rails'
+gem 'email_validator'
 
 group :development, :test do
   gem 'byebug'
