@@ -1,7 +1,7 @@
 <h1> Adoption Application </h1>
 
 <% if @adoption_application.errors.any? %>
-  <%= render 'error_messages/error_messages.html.erb', object: @adoption_application %>
+  <%= render "error_messages/error_messages", object: @adoption_application %>
 <% end %>
 
 <div class="form-questions">

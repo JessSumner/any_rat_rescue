@@ -7,7 +7,7 @@ class VolunteerApplicationsController < ApplicationController
     @volunteer_application = VolunteerApplication.new
                              (volunteer_application_params)
     if @volunteer_application.save
-      flash.now[:success] =
+      flash[:success] =
         "Thank you for submitting an application. We will contact you shortly."
       redirect_to volunteer_path
     else
