@@ -4,7 +4,8 @@ class AdoptionApplicationsController < ApplicationController
   end
 
   def create
-    @adoption_application = AdoptionApplication.new(adoption_application_params)
+    @adoption_application =
+      AdoptionApplication.new(adoption_application_params)
     if @adoption_application.save
       flash[:success] =
         "Thank you for submitting an application. We will contact you shortly."
