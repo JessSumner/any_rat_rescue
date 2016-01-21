@@ -23,8 +23,8 @@ module AnyRatRescue
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
 
-    config.action_view.field_error_proc = Proc.new do |html_tag, instance|
-      %Q(<div class="field-with-errors">#{html_tag}</div>).html_safe
+    config.action_view.field_error_proc = proc do |html_tag, _instance|
+      %(<div class="field-with-errors">#{html_tag}</div>).html_safe
     end
   end
 end
