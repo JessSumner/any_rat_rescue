@@ -1,98 +1,50 @@
 <table>
-  <tr>
-    <td>name</td>
-    <td><%= object.name %></td>
-  </tr>
-  <tr>
-    <td>address</td>
-    <td><%= object.address %></td>
-  </tr>
-  <tr>
-    <td>city</td>
-    <td><%= object.city %></td>
-  </tr>
-  <tr>
-    <td>cell</td>
-    <td><%= object.cell %></td>
-  </tr>
-  <tr>
-    <td>state</td>
-    <td><%= object.state %></td>
-  </tr>
-  <tr>
-    <td>zip</td>
-    <td><%= object.zip %></td>
-  </tr>
-  <tr>
-    <td>email</td>
-    <td><%= object.email %></td>
-  </tr>
-  <tr>
-    <td>current rats</td>
-    <td><%= object.current_rats %></td>
-  </tr>
-  <tr>
-    <td>current rat count</td>
-    <td><%= object.current_rat_count %></td>
-  </tr>
-  <tr>
-    <td>current rat gender</td>
-    <td><%= object.current_rat_gender %></td>
-  </tr>
-  <tr>
-    <td>current rat age</td>
-    <td><%= object.current_rat_age %></td>
-  </tr>
-  <tr>
-    <td>previous rats</td>
-    <td><%= object.previous_rats%></td>
-  </tr>
-  <tr>
-    <td>previous rat count</td>
-    <td><%= object.previous_rat_count %></td>
-  </tr>
-  <tr>
-    <td>previous rat lifespan</td>
-    <td><%= object.previous_rat_lifespan %></td>
-  </tr>
-  <tr>
-    <td>cause of death</td>
-    <td><%= object.cause_of_death %></td>
-  </tr>
-  <tr>
-    <td>vet care</td>
-    <td><%= object.vet_care %></td>
-  </tr>
-  <tr>
-    <td>vet name</td>
-    <td><%= object.vet_name %></td>
-  </tr>
-  <tr>
-    <td>cage description</td>
-    <td><%= object.cage_description %></td>
-  </tr>
-  <tr>
-    <td>cage location</td>
-    <td><%= object.cage_location%></td>
-  </tr>
-  <tr>
-    <td>household members</td>
-    <td><%= object.household_members %></td>
-  </tr>
-  <tr>
-    <td>children ages</td>
-    <td><%= object.children_ages%></td>
-  </tr>
-  <tr>
-    <td>additional animals</td>
-    <td><%= object.additional_animals %></td>
-  </tr>
-  <tr>
-    <td>interaction time</td>
-    <td><%= object.interaction_time %></td>
-  </tr>
-  <tr>
-    <td>preferred characteristics</td>
-    <td><%= object.preferred_characteristics %></td>
-  </tr>       
+  <%= render "data_entry", adoption_application: adoption_application,
+                           data_entry: :name %>
+  <%= render "data_entry", adoption_application: adoption_application,
+                           data_entry: :address %>
+  <%= render "data_entry", adoption_application: adoption_application,
+                           data_entry: :city %>
+  <%= render "data_entry", adoption_application: adoption_application,
+                           data_entry: :cell %>
+  <%= render "data_entry", adoption_application: adoption_application,
+                           data_entry: :state %>
+  <%= render "data_entry", adoption_application: adoption_application,
+                           data_entry: :zip %>
+  <%= render "data_entry", adoption_application: adoption_application,
+                           data_entry: :email %>
+  <%= render "data_entry", adoption_application: adoption_application,
+                           data_entry: :current_rats %>
+  <%= render "data_entry", adoption_application: adoption_application,
+                           data_entry: :current_rat_count %>
+  <%= render "data_entry", adoption_application: adoption_application,
+                           data_entry: :current_rat_gender %>
+  <%= render "data_entry", adoption_application: adoption_application,
+                           data_entry: :current_rat_age %>
+  <%= render "data_entry", adoption_application: adoption_application,
+                           data_entry: :previous_rats %>
+  <%= render "data_entry", adoption_application: adoption_application,
+                           data_entry: :previous_rat_count %>
+  <%= render "data_entry", adoption_application: adoption_application,
+                           data_entry: :previous_rat_lifespan %>
+  <%= render "data_entry", adoption_application: adoption_application,
+                           data_entry: :cause_of_death %>
+  <%= render "data_entry", adoption_application: adoption_application,
+                           data_entry: :vet_care %>
+  <%= render "data_entry", adoption_application: adoption_application,
+                           data_entry: :vet_name %>
+  <%= render "data_entry", adoption_application: adoption_application,
+                           data_entry: :cage_description %>
+  <%= render "data_entry", adoption_application: adoption_application,
+                           data_entry: :cage_location %>
+  <%= render "data_entry", adoption_application: adoption_application,
+                           data_entry: :household_members %>
+  <%= render "data_entry", adoption_application: adoption_application,
+                           data_entry: :children_ages %>
+  <%= render "data_entry", adoption_application: adoption_application,
+                           data_entry: :additional_animals %>
+  <%= render "data_entry", adoption_application: adoption_application,
+                           data_entry: :interaction_time %>
+  <%= render "data_entry", adoption_application: adoption_application,
+                           data_entry: :preferred_characteristics %>
 </table>
