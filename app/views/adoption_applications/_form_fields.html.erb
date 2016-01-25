@@ -23,14 +23,17 @@
   <%= f.text_field :email %>
   
   <div class="radio"> 
-    <%= radio_button_tag(:current_rats, "yes") %>
-    <%= label_tag(:current_rats_yes, "I currently own one or more rats") %></br>
+    <%= f.radio_button :current_rats, true %>
+    <%= f.label :current_rats, "I currently own one or more rats", :value => "true" %></br>
 
-    <%= radio_button_tag(:current_rats, "no", true) %>
-    <%= label_tag(:current_rats_no, "I do not currently own any rats") %>
+    <%= f.radio_button :current_rats, false, :checked => true %>
+    <%= f.label :current_rats, "I do not currently own any rats",
+                :value => "false" %>
   </div>
   
-  <div class="js-dependent-fields" data-radio-name='current_rats' data-radio-value='yes'>
+  <div class="js-dependent-fields" 
+       data-radio-name="adoption_application[current_rats]" 
+       data-radio-value="true">
     <%= f.label :current_rat_count %>
     <%= f.text_field :current_rat_count %>
 
@@ -42,15 +45,18 @@
   </div>
   
   <div class="radio">
-    <%= radio_button_tag(:previous_rats, "yes") %>
-    <%= label_tag(:previous_rats_yes, "I have previously owned one or more rats") %></br>
+    <%= f.radio_button :previous_rats, true %>
+    <%= f.label :previous_rats, "I have previously owned one or more rats",
+                :value => "true" %></br>
   
-    <%= radio_button_tag(:previous_rats, "no", true) %>
-    <%= label_tag(:previous_rats_no, "I have never owned any rats") %>
+    <%= f.radio_button :previous_rats, false, :checked => true %>
+    <%= f.label :previous_rats, "I have never owned any rats",
+                :value => "false" %>
   </div>
   
-  <div class="js-dependent-fields" data-radio-name='previous_rats' 
-                                   data-radio-value='yes'>
+  <div class="js-dependent-fields" 
+       data-radio-name="adoption_application[previous_rats]"
+       data-radio-value="true">
     <%= f.label :previous_rat_count %>
     <%= f.text_field :previous_rat_count %>
 
@@ -68,7 +74,8 @@
   <%= f.text_field :vet_name %>
   
   <div class="note">
-    Note: Your free adoption bag and our website include several vet choices around the Valley
+    Note: Your free adoption bag and our website include several vet choices
+    around the Valley
   </div>
   
   <%= f.label :cage_description %>
