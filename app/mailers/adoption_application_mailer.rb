@@ -7,6 +7,6 @@ class AdoptionApplicationMailer < ApplicationMailer
   private
 
   def admin_email
-    "email@example.com"
+    ENV['ADMIN_EMAIL']
   end
 end
