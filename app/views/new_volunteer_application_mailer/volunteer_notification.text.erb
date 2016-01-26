@@ -1,0 +1,5 @@
+A new volunteer application form has been submitted.
+
+<% VolunteerApplication::FORM_FIELDS.each do |field| %>
+  <%= field %>: <%= @volunteer_application[field] %>
+<% end %>

@@ -1,6 +1,8 @@
 class AdoptionApplication < ActiveRecord::Base
   FORM_FIELDS = %w(
-    name address city
+    name
+    address
+    city
     cell
     state
     zip

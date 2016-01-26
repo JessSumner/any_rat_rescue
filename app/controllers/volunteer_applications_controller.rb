@@ -43,7 +43,9 @@ class VolunteerApplicationsController < ApplicationController
       :other_animals_count,
       :work_location,
       :hours_away_from_home,
-      :rat_interaction_time
+      :rat_interaction_time,
+      :adoption_appointments,
+      :comments_or_questions
     )
   end
 end
