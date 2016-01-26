@@ -24,11 +24,11 @@
   
   <div class="radio"> 
     <%= f.radio_button :current_rats, true %>
-    <%= f.label :current_rats, "I currently own one or more rats", :value => "true" %></br>
+    <%= f.label :current_rats, "I currently own one or more rats", value: "true" %></br>
 
-    <%= f.radio_button :current_rats, false, :checked => true %>
+    <%= f.radio_button :current_rats, false, checked: true %>
     <%= f.label :current_rats, "I do not currently own any rats",
-                :value => "false" %>
+                value: "false" %>
   </div>
   
   <div class="js-dependent-fields" 
@@ -47,11 +47,11 @@
   <div class="radio">
     <%= f.radio_button :previous_rats, true %>
     <%= f.label :previous_rats, "I have previously owned one or more rats",
-                :value => "true" %></br>
+                value: "true" %></br>
   
-    <%= f.radio_button :previous_rats, false, :checked => true %>
+    <%= f.radio_button :previous_rats, false, checked: true %>
     <%= f.label :previous_rats, "I have never owned any rats",
-                :value => "false" %>
+                value: "false" %>
   </div>
   
   <div class="js-dependent-fields" 

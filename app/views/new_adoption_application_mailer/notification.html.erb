@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1 style="color:#363691">A new adoption application form has been submitted.</h1>
+    <div>
+      <table style="border-collapse: collapse;">
+        <% AdoptionApplication::FORM_FIELDS.each do |field| %>
+          <tr>
+            <td style="border:solid; border-width:1px; font-weight:bold;">
+              <%= field %></td>
+            <td style="border:solid; border-width:1px; width: auto;">
+              <%= @adoption_application[field] %></td>
+          </tr>
+        <% end %>
+      </table>
+    </div> 
+  </body>
+</html>
