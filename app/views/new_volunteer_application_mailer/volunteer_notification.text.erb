@@ -1,5 +1,9 @@
 A new volunteer application form has been submitted.
 
+This application was submitted at 
+  <%= time_submitted(@volunteer_application.created_at) %> on 
+  <%= date_submitted(@volunteer_application.created_at) %>.
+
 <% VolunteerApplication::FORM_FIELDS.each do |field| %>
   <%= field %>: <%= @volunteer_application[field] %>
 <% end %>

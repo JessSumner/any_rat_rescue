@@ -5,6 +5,11 @@
   </head>
   <body>
     <h1 style="color:#363691">A new volunteer application form has been submitted.</h1>
+    <h2>
+      This application was submitted at
+      <%= time_submitted(@volunteer_application.created_at) %> on 
+      <%= date_submitted(@volunteer_application.created_at) %>.
+    </h2>
     <div>
       <table style="border-collapse: collapse;">
         <% VolunteerApplication::FORM_FIELDS.each do |field| %>
