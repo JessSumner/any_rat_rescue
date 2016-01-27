@@ -1,0 +1,23 @@
+<p>
+  Want to be kept up to date with the latest news from Any Rat Rescue? Subscribe here to receive our monthly adoptables flyer and our quarterly newsletter.
+</p>
+
+<h1>
+  Monthly Adoptables Flyer
+</h1>
+
+<ul class="monthly-flyers">
+  <% @flyers.each do |flyer| %>
+    <li class="flyer">
+      <%= image_tag("assets/newsletters/monthly_flyers/#{flyer}") %>
+    </li>
+  <% end %>
+</ul>
+
+<h1>
+  Quarterly Newsletters
+</h1>
+
+<p>
+  Own a business and want to post our flyer? We appreciate the support and would love to hear from you. Please email us and tell us your story.
+</p>
