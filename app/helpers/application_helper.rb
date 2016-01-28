@@ -1,5 +1,4 @@
 module ApplicationHelper
-  
 
   def time_submitted(datetime)
     datetime.localtime.strftime("%l:%M %p")
