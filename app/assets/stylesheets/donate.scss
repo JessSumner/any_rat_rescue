@@ -8,3 +8,8 @@
   @include shift(5.25);
   padding-bottom: 20px;
 }
+
+ul {
+  @include shift(0.5);
+  list-style-type: circle;
+}
