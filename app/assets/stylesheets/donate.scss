@@ -9,7 +9,7 @@
   padding-bottom: 20px;
 }
 
-ul {
+.donatable-items {
   @include shift(0.5);
   list-style-type: circle;
 }
