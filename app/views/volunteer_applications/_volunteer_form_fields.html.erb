@@ -22,22 +22,27 @@
   <%= f.label :email %>
   <%= f.text_field :email %>
 
-  <%= f.label :reason_for_volunteering, "Why do you want to quarantine or
-                                        foster?" %>
+  <%= f.label :reason_for_volunteering,
+    "Why do you want to quarantine or foster?" %>
   <%= f.text_area :reason_for_volunteering, rows: 6 %>
   
   <div class="radio"> 
-    <%= f.radio_button :volunteering_type, "foster" %>
-    <%= f.label :volunteering_type, "I would like to be a foster home",
-          value: "foster" %></br>
+    <%= f.radio_button :volunteering_type,
+      "foster" %>
+    <%= f.label :volunteering_type,
+      "I would like to be a foster home",
+      value: "foster" %></br>
 
-    <%= f.radio_button :volunteering_type, "quarantine" %>
-    <%= f.label :volunteering_type, "I would like to be a quarantine home",
-          value: "quarantine" %></br>
+    <%= f.radio_button :volunteering_type,
+      "quarantine" %>
+    <%= f.label :volunteering_type,
+      "I would like to be a quarantine home",
+      value: "quarantine" %></br>
 
     <%= f.radio_button :volunteering_type, "either", checked: true %>
-    <%= f.label :volunteering_type_either, "I would like to foster or
-          quarantine", value: "either" %></br>
+    <%= f.label :volunteering_type_either,
+      "I would like to foster or quarantine",
+      value: "either" %></br>
   </div>
 
   <%= f.label :rat_cage_location, "Where will the rat cage be located?" %>
@@ -59,13 +64,14 @@
 
   <div class="radio">
     <%= f.radio_button :vet_appointments, true, checked: true %>
-    <%= f.label :vet_appointments, "I can keep vet appointments",
-          value: "true" %></br>
+    <%= f.label :vet_appointments,
+      "I can keep vet appointments",
+      value: "true" %></br>
 
     <%= f.radio_button :vet_appointments, false %>
-    <%= f.label :vet_appointments, "I can not keep vet appointments",
-          value: "false" %>
-    </br>
+    <%= f.label :vet_appointments,
+      "I can not keep vet appointments",
+      value: "false" %></br>
   </div>
 
   <div class="note">
@@ -75,12 +81,13 @@
 
   <div class="radio">
     <%= f.radio_button :caring_for_ill_rats, true, checked: true %>
-    <%= f.label :caring_for_ill_rats, "I am comfortable caring for sick or 
-                                        injured rats.", value: "true" %></br>
+    <%= f.label :caring_for_ill_rats,
+      "I am comfortable caring for sick or injured rats.",
+      value: "true" %></br>
 
     <%= f.radio_button :caring_for_ill_rats, false %>
-    <%= f.label :caring_for_ill_rats, "I can not look after sick or injured
-                                            rats.", value: "false" %></br>
+    <%= f.label :caring_for_ill_rats,
+      "I can not look after sick or injured rats.", value: "false" %></br>
   </div>
 
   <div class="radio">
@@ -107,20 +114,21 @@
   
   <div class="radio">
     <%= f.radio_button :other_animals, true %>
-    <%= f.label :other_animals, "I have other animals in my home.",
-          value: "true" %>
-    </br>
+    <%= f.label :other_animals,
+      "I have other animals in my home.",
+      value: "true" %></br>
   
     <%= f.radio_button :other_animals, false, checked: true %>
-    <%= f.label :other_animals, "I do not have any other animals in my home.",
-          value: "false" %></br>
+    <%= f.label :other_animals,
+      "I do not have any other animals in my home.",
+      value: "false" %></br>
   </div>
   
   <div class="js-dependent-fields"
        data-radio-name="volunteer_application[other_animals]"
        data-radio-value="true">
-    <%= f.label :other_animals_type, "What kind of other animals do you have
-                                      in your home?" %>
+    <%= f.label :other_animals_type,
+      "What kind of other animals do you have in your home?" %>
     <%= f.text_field :other_animals_type %>
 
     <%= f.label :other_animals_count, "How many other animals do you own?" %>
@@ -135,12 +143,12 @@
     <%= f.label :work_location, "I work from home.", value: "false" %></br>
   </div>
 
-  <%= f.label :hours_away_from_home, "How long are you away from home per day?"
-      %>
+  <%= f.label :hours_away_from_home,
+    "How long are you away from home per day?" %>
   <%= f.text_field :hours_away_from_home %>
   
-  <%= f.label :rat_interaction_time, "Will you be able to spend at least an
-                                      hour with the rats a day?" %>
+  <%= f.label :rat_interaction_time,
+    "Will you be able to spend at least an hour with the rats a day?" %>
   <%= f.text_field :rat_interaction_time %>
 
   <div class="note">
@@ -160,22 +168,23 @@
 
   <div class="radio">
     <%= f.radio_button :adoption_appointments, true, checked: true %>
-    <%= f.label :adoption_appointments, "I will be able to meet with adopters
-                                         for the rats I am caring for." %></br>
+    <%= f.label :adoption_appointments,
+      "I will be able to meet with adopters for the rats I am caring for." %>
+    </br>
 
     <%= f.radio_button :adoption_appointments, false %>
-    <%= f.label :adoption_appointments, "I will not be able to meet with 
-                                         adopters for the rats I am caring
-                                         for." %></br>
+    <%= f.label :adoption_appointments,
+      "I will not be able to meet with adopters for the rats I am caring for."
+      %></br>
   </div>
 
   <div class="note">
     All supplies for an adoption will be provided by Any Rat Rescue.
   </div>
 
-  <%= f.label :comments_or_questions, "Is there any thing else you would like
-                                      us to know? Or do you have any specific 
-                                      questions for us?" %>
+  <%= f.label :comments_or_questions,
+    "Is there any thing else you would like us to know? Or do you have any
+    specific questions for us?" %>
   <%= f.text_area :comments_or_questions %>
   
   <div class="Submit">
