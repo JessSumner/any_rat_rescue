@@ -16,6 +16,6 @@ class NewslettersController < ApplicationController
   ).freeze
 
   def index
-    @flyers = NewslettersController::FLYERS
+    @flyers = FLYERS
   end
 end

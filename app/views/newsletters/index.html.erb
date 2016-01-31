@@ -9,7 +9,7 @@
 <ul class="monthly-flyers">
   <% @flyers.each do |flyer| %>
     <li class="flyer">
-      <%= link_to flyer, asset_path("newsletters/monthly_flyers/#{flyer}.pdf"), class: "links" %>
+      <%= link_to flyer, asset_path("monthly_flyers/#{flyer}.pdf"), class: "links" %>
     </li>
   <% end %>
 </ul>
