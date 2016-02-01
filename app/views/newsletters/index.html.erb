@@ -1,23 +1,30 @@
-<p>
-  Want to be kept up to date with the latest news from Any Rat Rescue? Subscribe here to receive our monthly adoptables flyer and our quarterly newsletter.
-</p>
+<div class="newsletter-text">
+  <p>
+    Want to be kept up to date with the latest news from Any Rat Rescue? Subscribe here to receive our monthly adoptables flyer and our quarterly newsletter.
+  </p>
 
-<h1>
-  Monthly Adoptables Flyer
-</h1>
+  <h1>
+    Monthly Adoptables Flyer
+  </h1>
+</div>
+<div class="newsletter-list">
+  <ul class="monthly-flyers">
+    <% @flyers.each do |flyer| %>
+      <li class="flyer">
+        <%= link_to asset_path("monthly_flyers/#{flyer}.pdf"), class: "links" do %>
+          <%= image_tag("monthly_flyers/#{flyer}.png", class: "thumbnail") %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>
 
-<ul class="monthly-flyers">
-  <% @flyers.each do |flyer| %>
-    <li class="flyer">
-      <%= link_to flyer, asset_path("monthly_flyers/#{flyer}.pdf"), class: "links" %>
-    </li>
-  <% end %>
-</ul>
-
-<h1>
-  Quarterly Newsletters
-</h1>
-
-<p>
-  Own a business and want to post our flyer? We appreciate the support and would love to hear from you. Please email us and tell us your story.
-</p>
+<div class="newsletter-text">
+  <h1>
+    Quarterly Newsletters
+  </h1>
+  
+  <p>
+    Own a business and want to post our flyer? We appreciate the support and would love to hear from you. Please email us and tell us your story.
+  </p>
+</div>

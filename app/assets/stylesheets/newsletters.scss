@@ -1,3 +1,20 @@
-// Place all the styles related to the NewslettersController controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.newsletter-text {
+  @include span-columns(7);
+  @include shift(2.5);
+  text-align: justify;
+}
+
+.newsletter-list {
+  @include span-columns(7);
+  @include shift(2.75);
+}
+
+img.thumbnail {
+  height: 141px;
+  padding: 10px;
+  width: 109px;
+}
+
+li.flyer {
+  display: inline;
+}

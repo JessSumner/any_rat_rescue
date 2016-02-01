@@ -13,7 +13,7 @@ class NewslettersController < ApplicationController
 
   def flyers_with_file_extension
     unsorted_flyers.sort do |date_1, date_2 |
-      Date.parse("1-#{date_1}") <=> Date.parse("1-#{date_2}")
+      Date.parse("1-#{date_2}") <=> Date.parse("1-#{date_1}")
     end
   end
 
