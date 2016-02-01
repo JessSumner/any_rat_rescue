@@ -1,21 +1,27 @@
 class NewslettersController < ApplicationController
-  FLYERS = %w(
-    jan-16
-    dec-15
-    nov-15
-    oct-15
-    sep-15
-    aug-15
-    jul-15
-    jun-15
-    may-15
-    mar-15
-    feb-15
-    jan-15
-    dec-14
-  ).freeze
-
   def index
-    @flyers = FLYERS
+    @flyers = flyers
+  end
+
+  private
+
+  def flyers
+    flyers_with_file_extension.map do |flyer|
+      flyer.gsub(/\.pdf/,"")
+    end
+  end
+
+  def flyers_with_file_extension
+    unsorted_flyers.sort do |date_1, date_2 |
+      Date.parse("1-#{date_1}") <=> Date.parse("1-#{date_2}")
+    end
+  end
+
+  def unsorted_flyers
+    monthly_flyers_contents.select{ |flyer| flyer =~ /.*\.pdf/i }
+  end
+
+  def monthly_flyers_contents
+    Dir.entries("app/assets/newsletters/monthly_flyers")
   end
 end
