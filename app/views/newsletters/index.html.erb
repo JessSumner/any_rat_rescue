@@ -11,7 +11,7 @@
   <ul class="monthly-flyers">
     <% @flyers.each do |flyer| %>
       <li class="flyer">
-        <%= link_to asset_path("monthly_flyers/#{flyer}.pdf"), class: "links" do %>
+        <%= link_to asset_path("monthly_flyers/#{flyer}.pdf") do %>
           <%= image_tag("monthly_flyers/#{flyer}.png", class: "thumbnail") %>
         <% end %>
       </li>
@@ -23,7 +23,20 @@
   <h1>
     Quarterly Newsletters
   </h1>
-  
+</div>
+<div class="newsletter-list">
+  <ul class="monthly-flyers">
+    <% @news.each do |news| %>
+      <li class="flyer">
+        <%= link_to asset_path("news/#{news}.pdf") do %>
+          <%= image_tag("news/#{news}.png", class: "thumbnail") %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+<div class="newsletter-text">
   <p>
     Own a business and want to post our flyer? We appreciate the support and would love to hear from you. Please email us and tell us your story.
   </p>
