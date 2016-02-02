@@ -15,9 +15,11 @@
         <% VolunteerApplication::FORM_FIELDS.each do |field| %>
           <tr>
             <td style="border:solid; border-width:1px; font-weight:bold;">
-              <%= field %></td>
+              <%= field %>
+            </td>
             <td style="border:solid; border-width:1px; width: auto;">
-              <%= @volunteer_application[field] %></td>
+              <%= @volunteer_application[field] %>
+            </td>
           </tr>
         <% end %>
       </table>
