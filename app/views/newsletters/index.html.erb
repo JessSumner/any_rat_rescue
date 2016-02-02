@@ -11,7 +11,7 @@
 <div class="newsletter-list">
   <ul class="monthly-flyers">
     <% @flyers.each do |flyer| %>
-      <li class="flyer">
+      <li class="newsletter-list-items">
         <%= link_to asset_path("monthly_flyers/#{flyer}.pdf") do %>
           <%= image_tag("monthly_flyers/#{flyer}.png", class: "thumbnail") %>
         <% end %>
@@ -29,7 +29,7 @@
 <div class="newsletter-list">
   <ul class="monthly-flyers">
     <% @news.each do |news| %>
-      <li class="flyer">
+      <li class="newsletter-list-items">
         <%= link_to asset_path("news/#{news}.pdf") do %>
           <%= image_tag("news/#{news}.png", class: "thumbnail") %>
         <% end %>

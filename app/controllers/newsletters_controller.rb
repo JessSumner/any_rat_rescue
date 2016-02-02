@@ -9,25 +9,25 @@ class NewslettersController < ApplicationController
   def news
     @file = "news"
     newsletters_with_file_extension.map do |newsletter|
-      newsletter.gsub(/\.pdf/,"")
+      newsletter.gsub(/\.pdf/, "")
     end
   end
 
   def flyers
     @file = "monthly_flyers"
     newsletters_with_file_extension.map do |newsletter|
-      newsletter.gsub(/\.pdf/,"")
+      newsletter.gsub(/\.pdf/, "")
     end
   end
 
   def newsletters_with_file_extension
-    unsorted_newsletters.sort do |date_1, date_2 |
+    unsorted_newsletters.sort do |date_1, date_2|
       Date.parse("1-#{date_2}") <=> Date.parse("1-#{date_1}")
     end
   end
 
   def unsorted_newsletters
-    file_contents.select{ |newsletter| newsletter =~ /.*\.pdf/i }
+    file_contents.select { |newsletter| newsletter =~ /.*\.pdf/i }
   end
 
   def file_contents

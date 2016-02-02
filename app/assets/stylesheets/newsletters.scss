@@ -10,13 +10,13 @@
   @include shift(2.75);
 }
 
-img.thumbnail {
+.thumbnail {
   height: 141px;
   padding: 10px;
   width: 109px;
 }
 
-li.flyer {
+.newsletter-list-items {
   display: inline;
 }
 
