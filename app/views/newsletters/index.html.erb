@@ -1,12 +1,13 @@
 <div class="newsletter-text">
   <p>
-    Want to be kept up to date with the latest news from Any Rat Rescue? Subscribe here to receive our monthly adoptables flyer and our quarterly newsletter.
+    Want to be kept up to date with the latest news from Any Rat Rescue? 
   </p>
-
+  <button class="subscribe"><%= link_to "Subscribe", "#" %></button>
   <h1>
     Monthly Adoptables Flyer
   </h1>
 </div>
+
 <div class="newsletter-list">
   <ul class="monthly-flyers">
     <% @flyers.each do |flyer| %>
@@ -24,6 +25,7 @@
     Quarterly Newsletters
   </h1>
 </div>
+
 <div class="newsletter-list">
   <ul class="monthly-flyers">
     <% @news.each do |news| %>
@@ -38,6 +40,6 @@
 
 <div class="newsletter-text">
   <p>
-    Own a business and want to post our flyer? We appreciate the support and would love to hear from you. Please email us and tell us your story.
+    Own a business and want to post our flyer? We appreciate the support and would love to hear from you. Please <%= link_to "email us", "#" %> and tell us your story.
   </p>
 </div>

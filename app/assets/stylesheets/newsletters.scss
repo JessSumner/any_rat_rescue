@@ -1,7 +1,8 @@
 .newsletter-text {
   @include span-columns(7);
   @include shift(2.5);
-  text-align: justify;
+  margin-top: 20px;
+  text-align: center;
 }
 
 .newsletter-list {
@@ -17,4 +18,12 @@ img.thumbnail {
 
 li.flyer {
   display: inline;
+}
+
+button > a {
+  color: $white;
+
+  &:hover {
+    color: $white;
+  }
 }
