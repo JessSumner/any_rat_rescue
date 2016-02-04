@@ -1,4 +1,4 @@
-class NewsletterFinder < ActiveRecord::Base
+class NewsletterFinder
   def news
     newsletters_with_file_extension("news").map do |newsletter|
       newsletter.gsub(/\.pdf/, "")
