@@ -30,8 +30,8 @@
   <ul class="monthly-flyers">
     <% @news.each do |news| %>
       <li class="newsletter-list-items">
-        <%= link_to asset_path("news/#{news}.pdf") do %>
-          <%= image_tag("news/#{news}.png", class: "thumbnail") %>
+        <%= link_to asset_path("news_documents/#{news}.pdf") do %>
+          <%= image_tag("news_documents/#{news}.png", class: "thumbnail") %>
         <% end %>
       </li>
     <% end %>
