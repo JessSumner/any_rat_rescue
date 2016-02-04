@@ -10,13 +10,13 @@
     margin-top: 100px;
   }
 
-  .block-text {
+  .home-page-text {
     @include span-columns (5 of 12);
     text-align: justify;
   }
 }
 
-.block-text {
+.home-page-text {
   @include span-columns(5);
   text-align: justify;
 }
