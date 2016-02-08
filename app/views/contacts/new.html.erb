@@ -1,5 +1,9 @@
 <h2>Send us a message, we're listening</h2>
 
+<% if @contact.errors.any? %>
+  <%= render "error_messages/error_messages", object: @contact %>
+<% end %>
+
 <div class="contact-form-image">
   <div class="contact-image">
     <%= image_tag("rat-5.jpg") %>
