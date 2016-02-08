@@ -1,7 +1,7 @@
 <h2>Send us a message, we're listening</h2>
 
-<% if @contact.errors.any? %>
-  <%= render "error_messages/error_messages", object: @contact %>
+<% if @contact_message.errors.any? %>
+  <%= render "error_messages/error_messages", object: @contact_message %>
 <% end %>
 
 <div class="contact-form-image">
@@ -9,7 +9,7 @@
     <%= image_tag("rat-5.jpg") %>
   </div>
   <div class="contact-form">
-    <%= form_for @contact do |f| %>
+    <%= form_for @contact_message do |f| %>
       <%= f.label :name %>
       <%= f.text_field :name %>
 

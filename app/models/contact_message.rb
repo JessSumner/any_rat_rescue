@@ -1,4 +1,4 @@
-class Contact < ActiveRecord::Base
+class ContactMessage < ActiveRecord::Base
   before_save :downcase_email
   validates :name, presence: true
   validates :cell, cell: true, presence: true

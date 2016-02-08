@@ -1,6 +1,6 @@
-class CreateContacts < ActiveRecord::Migration
+class CreateContactMessages < ActiveRecord::Migration
   def change
-    create_table :contacts do |t|
+    create_table :contact_messages do |t|
       t.string :name, null: false
       t.string :email, null: false
       t.string :cell, null: false

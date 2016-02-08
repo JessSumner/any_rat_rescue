@@ -1,11 +1,11 @@
-class ContactsController < ApplicationController
+class ContactMessagesController < ApplicationController
   def new
-    @contact = Contact.new
+    @contact_message = ContactMessage.new
   end
 
   def create
-    @contact = Contact.new(contact_params)
-    if @contact.save
+    @contact_message = ContactMessage.new(contact_message_params)
+    if @contact_message.save
       flash[:success] =
         "It's good to hear from you. We will respond to your message shortly."
       redirect_to root_path
@@ -18,8 +18,8 @@ class ContactsController < ApplicationController
 
   private
 
-  def contact_params
-    params.require(:contact).permit(
+  def contact_message_params
+    params.require(:contact_message).permit(
       :name,
       :email,
       :cell,
