@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :adoption_applications, only: [:new, :create]
   resources :volunteer_applications, only: [:new, :create]
   resources :newsletters, only: [:index]
+  resources :contacts, only: [:new, :create]
   resource :volunteer, only: [:show]
   resource :donate, only: [:show]
 end

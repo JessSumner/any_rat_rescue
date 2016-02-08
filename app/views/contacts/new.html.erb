@@ -1,0 +1,17 @@
+Contact us
+
+<%= image_tag("rat-5.jpg") %>
+
+<%= form_for @contact do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+
+  <%= f.label :cell %>
+  <%= f.text_field :cell %>
+
+  <%= f.label :message %>
+  <%= f.text_area :message %>
+<% end %>
