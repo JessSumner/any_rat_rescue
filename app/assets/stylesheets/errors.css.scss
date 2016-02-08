@@ -6,6 +6,10 @@
   label {
     color: darken($error-color, 60%);
   }
+
+  textarea {
+    background: $error-color;
+  }
 }
 
 .error-explanation {

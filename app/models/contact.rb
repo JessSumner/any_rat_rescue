@@ -3,6 +3,7 @@ class Contact < ActiveRecord::Base
   validates :name, presence: true
   validates :cell, cell: true, presence: true
   validates :email, email: true, presence: true
+  validates :message, presence: true
 
   private
 
