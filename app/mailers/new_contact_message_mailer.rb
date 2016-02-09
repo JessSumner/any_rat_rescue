@@ -1,0 +1,2 @@
+class NewContactMessageMailer < ApplicationMailer
+end
