@@ -1,4 +1,11 @@
 class ContactMessage < ActiveRecord::Base
+  FORM_FIELDS = %w(
+    name
+    email
+    cell
+    message
+  ).freeze
+
   before_save :downcase_email
   validates :name, presence: true
   validates :cell, cell: true, presence: true
