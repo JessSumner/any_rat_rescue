@@ -6,6 +6,8 @@ class ContactMessagesController < ApplicationController
   def create
     @contact_message = ContactMessage.new(contact_message_params)
     if @contact_message.save
+      NewContactMessageMailer.contact_message_notification(
+        @contact_message).deliver_now
       flash[:success] =
         "It's good to hear from you. We will respond to your message shortly."
       redirect_to root_path
