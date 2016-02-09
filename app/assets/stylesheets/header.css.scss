@@ -119,3 +119,33 @@ li:hover ul {
   top: 0;
   width: 669px;
 }
+
+.banner-information {
+  border-style: outset;
+  border-width: thick;
+  float: right;
+
+  margin-right: 50px;
+  margin-top: 15px;
+
+}
+
+.contact-information {
+
+  .type {
+    padding: 5px 10px 0 20px;
+    text-decoration: underline;
+  }
+
+  .detail {
+    padding: 0 10px 5px 20px;
+  }
+
+  :first-child {
+    padding-top: 12.5px;
+  }
+
+  :last-child {
+    padding-bottom: 12.5px;
+  }
+}
