@@ -72,12 +72,11 @@ li:hover ul {
 
 
 .logo {
-  border-style: outset;
-  border-width: thick;
-  height: 200px;
+  box-shadow: -10px 10px 30px 0 rgba(0, 0, 0, 0.75);
+  height: 190px;
   margin-left: 50px;
-  margin-top: 15px;
-  width: 250px;
+  margin-top: 25px;
+  width: 240px;
 }
 
 .banner-container {
@@ -121,12 +120,11 @@ li:hover ul {
 }
 
 .banner-information {
-  border-style: outset;
-  border-width: thick;
+  box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.75);
   float: right;
 
   margin-right: 50px;
-  margin-top: 15px;
+  margin-top: 25px;
 
 }
 
