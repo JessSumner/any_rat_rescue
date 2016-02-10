@@ -5,6 +5,8 @@ $tan: #f7c797;
 $transparent: transparent;
 $transparent-blue: transparentize($blue, 0.35);
 $white: #ffffff;
+$black: #000000;
+$shadow: transparentize($black, 0.75);
 
 main {
   @include outer-container;
