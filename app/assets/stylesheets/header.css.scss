@@ -27,7 +27,6 @@ h2 {
 .nav {
   @include span-columns(8);
   @include shift(3.25);
-  font-family: 'Architects Daughter', cursive;
   font-weight: bold;
   list-style-type: none;
   margin-top: 0;
