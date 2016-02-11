@@ -1,3 +1,7 @@
+p {
+  word-break: normal
+} // I don't know why I need this!?!?!?!?
+
 .text-with-side-image {
   @include outer-container;
   @include span-columns(12);
