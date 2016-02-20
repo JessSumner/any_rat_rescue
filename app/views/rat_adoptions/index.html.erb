@@ -11,6 +11,12 @@
   Mouse over their picture for their name. Click the image for more information.
 </div>
 
+<div class="button">
+  <button class="with-link">
+    <%= link_to "Adopt Today", new_adoption_application_path %>
+  </button>
+</div>
+
 <div>
   <ul class="list-of-rats">
     <% @available_rats.each do |rat| %>

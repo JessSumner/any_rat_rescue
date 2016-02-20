@@ -15,3 +15,11 @@ main {
 body {
   margin: 0;
 }
+
+button.with-link > a {
+  color: $white;
+
+  &:hover {
+    color: $white;
+  }
+}

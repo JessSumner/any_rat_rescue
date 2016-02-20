@@ -19,4 +19,10 @@ h2 {
   .volunteer-image {
     @include span-columns(3 of 12);
   }
+
+  button {
+    @include span-columns(2);
+    @include shift(2.5);
+    margin-bottom: 20px;
+  }
 }

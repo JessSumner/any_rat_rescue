@@ -37,6 +37,11 @@
   }
 }
 
+.button {
+  @include span-columns(2);
+  @include shift(5);
+}
+
 .list-of-rats {
   list-style-type: none;
   margin: 0;

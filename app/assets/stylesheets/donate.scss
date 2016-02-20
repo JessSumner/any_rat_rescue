@@ -13,11 +13,3 @@
   @include shift(0.5);
   list-style-type: circle;
 }
-
-button > a {
-  color: $white;
-
-  &:hover {
-    color: $white;
-  }
-}
